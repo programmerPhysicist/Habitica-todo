@@ -20,6 +20,15 @@ def get_all_habtasks(auth):
         hab_tasklist = []
         print(response.reason)
 
+    # Get completed tasks
+    auth['type'] = "completedTodos"
+    response = requests.get(url, headers=auth)
+    if response.ok:
+        hab_raw = response.json()
+        hab_tasklist += hab_raw['data']
+    else:
+        print(response.reason)
+
     # keeping records of all our tasks
     hab_tasks = []
 

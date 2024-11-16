@@ -112,6 +112,7 @@ class TestHelpers:
 
     def scrub_habitica_put_resp(self, s_json):
         s_json['data']['text'] = "some test task " + str(self.counter)
+        s_json['data']['userId'] = "cd18fc9f-b649-4384-932a-f3bda6fe8102"
         return s_json
 
     def scrub_todoist_tasks(self, s_json):
@@ -195,7 +196,7 @@ def fake_or_real_file(tmp_path_factory):
 # initialization
 helper = TestHelpers()
 
-fake_post_count = 0 # pylint: disable=invalid-name
+post_count = 0 # pylint: disable=invalid-name
 
 
 def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-argument, redefined-outer-name
@@ -206,9 +207,6 @@ def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-arg
                    'error': 'BadRequest',
                    'message': 'todo validation failed',
                    'errors': errors_result}
-    # 'https://habitica.com/api/v3/tasks/4838805235'
-    # vs
-    # 'https://habitica.com/api/v3/tasks/user/'
 
     # set default response
     response = mock({'status': 400, 'ok': False,
@@ -216,8 +214,8 @@ def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-arg
                     spec=requests.Response)
 
     when(response).json().thenReturn(json_result)
-    global fake_post_count
-    fake_post_count += 1
+    global post_count
+    post_count += 1
     return response
 
 
@@ -277,8 +275,7 @@ class TestIntegration2:
             assert bool(data)
 
             # check # of post to habitica
-            # assert fake_post_count == 3
-            assert fake_post_count == 0
+            assert post_count == 1
 
             # clean-up
             unstub()

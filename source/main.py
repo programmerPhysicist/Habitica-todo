@@ -7,6 +7,7 @@ import os
 import logging
 import configparser
 import sys
+import pickle
 from datetime import datetime
 import requests
 import time
@@ -151,7 +152,7 @@ def check_newMatches(matchDict, tod_uniq, hab_uniq):
                     if oldTid in matchDict.keys():
                         matchDict.pop(oldTid)
                     r = add_hab_id(tid, hab_task)
-                    if r.ok:
+                    if not r.ok:
                         print("Error updating hab %s! %s" % (hab.name, r.reason))
                     else:
                         matchDict[tid] = {}
@@ -411,14 +412,16 @@ def make_tod_from_hab(hab):
 
 
 def openMatchDict():
-    import pickle
+    input_file = 'oneWay_matchDict.pkl'
+    matchDict = {}
     try:
-        pkl_file = open('oneWay_matchDict.pkl', 'rb')
-        pkl_load = pickle.Unpickler(pkl_file)
-        matchDict = pkl_load.load()
-        pkl_file.close()
-    except:
-        matchDict = {}
+        if os.path.getsize(input_file) > 0:
+            pkl_file = open(input_file, 'rb')
+            pkl_load = pickle.Unpickler(pkl_file)
+            matchDict = pkl_load.load()
+            pkl_file.close()
+    except OSError as e:
+        print(e)
 
     for tid in matchDict:
         if 'recurs' not in matchDict[tid].keys():
@@ -660,10 +663,9 @@ def update_hab_matchDict(hab_tasks, matchDict):
             expired_tids.append(tid)
 
     for tid in expired_tids:
-        if tid not in matchDict.keys():
-            continue
-        else:
-            matchDict.pop(tid)
+        if tid in matchDict.keys():
+            if not matchDict[tid]['hab'].completed:
+                matchDict.pop(tid)
 
     return matchDict
 

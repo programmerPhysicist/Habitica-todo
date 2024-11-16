@@ -14,6 +14,7 @@ import time
 
 import main
 from todo_task import TodTask
+from hab_task import HabTask
 from todo_api_plus import TodoAPIPlus
 import config
 import habitica
@@ -27,6 +28,18 @@ def get_tasks(token):
     except Exception as error:
         print(error)
     return tasks, api
+
+
+def completeTodoist(todo_api, task_id):
+    try:
+        is_success = todo_api.close_task(task_id=task_id)
+    except Exception as e:
+        print(e)
+    else:
+        if is_success:
+            print("INFO: Update Todoist task to done, task_id=" + str(task_id))
+        else:
+            print("ERROR: Unable to update todoist task, task_id=" + str(task_id))
 
 
 def sync_todoist_to_habitica():
@@ -88,19 +101,26 @@ def sync_todoist_to_habitica():
         response = main.write_hab_task(new_dict)
         if not response.ok:
             # TODO: check ['errors'], due to it sometimes not having it
-            try:
-                json_str = response.json()
-            except:
-                print("Unknown json error!")
-            else:
-                if 'errors' in json_str.keys():
-                    err_msg = json_str['errors'][0]['message']
-                    alias = json_str['errors'][0]['value']
-                elif 'error' in json_str.keys():
-                    breakpoint()
-                    err_msg = json_str['message']
-                msg = "Error Code " + str(response.status_code) + ": \"" + err_msg + "\", Task alias: " + alias
-                print(msg)
+            if response.status_code == 400 and response.reason == 'Bad Request':
+                try:
+                    json_str = response.json()
+                except:
+                    print("Unknown json error!")
+                else:
+                    if 'errors' in json_str.keys():
+                        alias = json_str['errors'][0]['value']
+                    elif 'error' in json_str.keys():
+                        err_msg = json_str['message']
+                        print(err_msg)
+                    print("WARNING: Bad request, already existing task - " + alias)
+                    completeTodoist(todo_api, alias)
+                    hab = HabTask()
+                    hab.task_dict['completed'] = True
+                    hab.task_dict['alias'] = alias
+
+                    match_dict[alias] = {}
+                    match_dict[alias]['tod'] = tod
+                    match_dict[alias]['hab'] = hab
         else:
             print("Added hab to %s!" % tod.name)
             fin_hab = main.get_hab_fromID(tid)
@@ -172,8 +192,8 @@ def sync_todoist_to_habitica():
                     matched_hab = main.sync_hab2todo(hab, tod)
                     response = main.update_hab(matched_hab)
                 elif hab.completed:
-                    fix_tod = todo_api.items.get_by_id(tid)
-                    fix_tod.close()
+                    # fix_tod = todo_api.items.get_by_id(tid)
+                    # fix_tod.close()
                     print('completed tod %s' % tod.name)
                 else:
                     print("ERROR: check HAB %s" % tid)
@@ -202,7 +222,7 @@ def sync_todoist_to_habitica():
     #        match_dict[tid]['hab'].task_dict['date'] = dueNow
     #        response = main.update_hab(match_dict[tid]['hab'])
 
-    pkl_file = open('oneWay_match_dict.pkl', 'wb')
+    pkl_file = open('oneWay_matchDict.pkl', 'wb')
     pkl_out = pickle.Pickler(pkl_file, -1)
     pkl_out.dump(match_dict)
     pkl_file.close()

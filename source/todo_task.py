@@ -108,6 +108,7 @@ class TodTask(object):
     def is_completed(self):
         return self.__task_dict['is_completed']
 
+    # TODO: No longer works
     @is_completed.setter
     def complete(self, status):
         self.__task_dict['checked'] = status
