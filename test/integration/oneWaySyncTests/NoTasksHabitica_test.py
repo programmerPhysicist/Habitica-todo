@@ -1,15 +1,14 @@
-# pylint: disable=missing-function-docstring, missing-module-docstring, invalid-name, import-error, missing-class-docstring
-# integration test for oneWaySync.py
+# pylint: disable=missing-function-docstring, missing-module-docstring, invalid-name, import-error
+# integration test for one_way_sync.py
 import os
 import pickle
 import pytest
-from mockito import when, mock, unstub, when2, kwargs, verify, captor, ANY, arg_that
-from oneWaySync import sync_todoist_to_habitica
-# from oneWaySync import get_all_completed_items # pylint: disable=unused-import
-from todo_api_plus import TodoAPIPlus as todoAPI
-import oneWaySync
-from todoist_api_python import models
 import requests
+from mockito import when, mock, unstub, when2, kwargs, verify, captor, ANY, arg_that
+from one_way_sync import sync_todoist_to_habitica
+import one_way_sync
+from todo_api_plus import TodoAPIPlus as todoAPI
+from todoist_api_python import models
 from common_fixtures import empty_pickle
 # pylint: enable=invalid-name
 
@@ -31,12 +30,12 @@ def fake_config_file(tmp_path_factory):
     tmp = tmp_path_factory.mktemp("config")
     cfg_for_test = os.path.join(tmp, "auth.cfg")
     cfg = open(cfg_for_test, 'w')
-    li = ["[Habitica]\n", "url = https://habitica.com\n",
-          "login = cd18fc9f-b649-4384-932a-f3bda6fe8102\n",
-          "password = 18f22441-2c87-6d8e-fb2a-3fa670837b5a\n",
-          "\n", "[Todoist]\n",
-          "api-token = d1347120363c2b310653f610d382729bd51e13c6\n", "\n"]
-    cfg.writelines(li)
+    line = ["[Habitica]\n", "url = https://habitica.com\n",
+            "login = cd18fc9f-b649-4384-932a-f3bda6fe8102\n",
+            "password = 18f22441-2c87-6d8e-fb2a-3fa670837b5a\n",
+            "\n", "[Todoist]\n",
+            "api-token = d1347120363c2b310653f610d382729bd51e13c6\n", "\n"]
+    cfg.writelines(line)
     cfg.close()
     os.chdir(tmp)
 
@@ -59,7 +58,7 @@ def mocked_inputs(request):
 
     # mock call to Todoist
     tasks = request.param['todo_tasks']
-    when(oneWaySync).get_tasks(...).thenReturn((tasks, todoAPI))
+    when(one_way_sync).get_tasks(...).thenReturn((tasks, todoAPI))
 
     # mock out call to Todoist for completed tasks
     tasks = request.param['done_tasks']
@@ -106,14 +105,15 @@ def verify_post_request(data):
     return False
 
 
-class TestIntegration:
+# pylint: disable=missing-class-docstring
+class TestNoTasksHabitica:
     # pylint: disable=redefined-outer-name, unused-argument, too-many-locals, too-few-public-methods
     @pytest.mark.parametrize("mocked_inputs", [case1()], indirect=True)
     @pytest.mark.parametrize("pickle_in", [empty_pickle()], indirect=True)
-    def test_new_task_todoist(self,
-                              fake_config_file,
-                              mocked_inputs,
-                              pickle_in):
+    def test(self,
+             fake_config_file,
+             mocked_inputs,
+             pickle_in):
         # pylint: enable=redefined-outer-name, unused-argument
 
         # set default response

@@ -11,6 +11,7 @@ just not for recurring todo tasks or dailies. I'm workin' on that.
 # from datetime import datetime, timedelta
 import pickle
 import time
+import json
 
 import main
 from todo_task import TodTask
@@ -21,20 +22,23 @@ import habitica
 
 
 def get_tasks(token):
+    '''Get tasks from Todoist, except completed'''
     tasks = []
     api = TodoAPIPlus(token)
     try:
         tasks = api.get_tasks()
-    except Exception as error:
+    except ConnectionError as error:
         print(error)
     return tasks, api
 
 
-def completeTodoist(todo_api, task_id):
+# TODO: move this is more general code area
+def complete_todoist(todo_api, task_id):
+    '''Sends command to Todoist to complete task'''
     try:
         is_success = todo_api.close_task(task_id=task_id)
-    except Exception as e:
-        print(e)
+    except ConnectionError as error:
+        print(error)
     else:
         if is_success:
             print("INFO: Update Todoist task to done, task_id=" + str(task_id))
@@ -78,11 +82,11 @@ def sync_todoist_to_habitica():
     tod_tasks = tod_tasks + tod_done
 
     # Also, update lists of tasks with match_dict file...
-    match_dict = main.update_tod_matchDict(tod_tasks, match_dict)
-    match_dict = main.update_hab_matchDict(hab_tasks, match_dict)
+    match_dict = main.update_tod_match_dict(tod_tasks, match_dict)
+    match_dict = main.update_hab_match_dict(hab_tasks, match_dict)
 
     # Okay, so what if there are two matched tasks in the two uniq lists that really should be paired?
-    match_dict = main.check_newMatches(match_dict, tod_tasks, hab_tasks)
+    match_dict = main.check_new_matches(match_dict, tod_tasks, hab_tasks)
 
     # Pull all the unmatched completed Todoist tasks out of our lists of tasks.
     tod_uniq = main.get_uniqs(match_dict, tod_tasks)
@@ -104,8 +108,8 @@ def sync_todoist_to_habitica():
             if response.status_code == 400 and response.reason == 'Bad Request':
                 try:
                     json_str = response.json()
-                except:
-                    print("Unknown json error!")
+                except json.JSONDecodeError as error:
+                    print(error)
                 else:
                     if 'errors' in json_str.keys():
                         alias = json_str['errors'][0]['value']
@@ -113,7 +117,7 @@ def sync_todoist_to_habitica():
                         err_msg = json_str['message']
                         print(err_msg)
                     print("WARNING: Bad request, already existing task - " + alias)
-                    completeTodoist(todo_api, alias)
+                    complete_todoist(todo_api, alias)
                     hab = HabTask()
                     hab.task_dict['completed'] = True
                     hab.task_dict['alias'] = alias
@@ -141,8 +145,8 @@ def sync_todoist_to_habitica():
         tod = match_dict[tid]['tod']
         hab = match_dict[tid]['hab']
         if tod.recurring == 'Yes':
-            if hab.dueToday == True:
-                if hab.completed == False:
+            if hab.dueToday:
+                if not hab.completed:
                     if tod.dueToday == 'Yes':
                         matched_hab = main.sync_hab2todo(hab, tod)
                         response = main.update_hab(matched_hab)
@@ -151,10 +155,10 @@ def sync_todoist_to_habitica():
                         print('Completed daily hab %s' % hab.name)
                     else:
                         print("error in daily Hab")
-                elif hab.completed == True:
+                elif hab.completed:
                     if tod.dueToday == 'Yes':
-                        fix_tod = todo_api.items.get_by_id(tid)
-    #                    fix_tod.close()
+                        # fix_tod = todo_api.items.get_by_id(tid)
+                        # fix_tod.close()
                         print('fix the tod! TID %s, NAMED %s' %(tid, tod.name))
                     elif tod.dueToday == 'No':
                         continue

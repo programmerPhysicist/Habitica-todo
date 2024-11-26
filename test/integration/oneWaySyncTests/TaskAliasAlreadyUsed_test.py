@@ -14,7 +14,7 @@ import pytest
 import vcr
 from mockito import when, mock, unstub, when2, verify, captor, ANY, patch
 from common_fixtures import empty_pickle
-from oneWaySync import sync_todoist_to_habitica
+from one_way_sync import sync_todoist_to_habitica
 # pylint: enable=invalid-name
 
 
@@ -86,7 +86,6 @@ class TestHelpers:
                 data[i]['text'] = "some reward"
             else:
                 print('Warning: Unknown type')
-                breakpoint()
             if data[i]['notes'] != "":
                 data[i]['notes'] = "Test notes"
             if data[i]['challenge']:
@@ -184,7 +183,7 @@ class TestHelpers:
 
 
 @pytest.fixture()
-def fake_or_real_file(tmp_path_factory):
+def auth_cfg(tmp_path_factory):
     tmp = tmp_path_factory.mktemp("config2")
     cfg_test = os.path.join(tmp, "auth.cfg")
     src_path = os.path.join(TestHelpers.get_root(), "source/auth.cfg")
@@ -194,9 +193,8 @@ def fake_or_real_file(tmp_path_factory):
 
 
 # initialization
-helper = TestHelpers()
-
-post_count = 0 # pylint: disable=invalid-name
+HELPER = TestHelpers()
+POST_COUNT = 0
 
 
 def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-argument, redefined-outer-name
@@ -214,13 +212,13 @@ def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-arg
                     spec=requests.Response)
 
     when(response).json().thenReturn(json_result)
-    global post_count
-    post_count += 1
+    global POST_COUNT
+    POST_COUNT += 1
     return response
 
 
-class TestIntegration2:
-    testVcr = vcr.VCR(
+class TestTaskAliasAlreadyUsed:
+    test_vcr = vcr.VCR(
         serializer='yaml',
         cassette_library_dir=TestHelpers.get_cassette_dir(),
         record_mode='once',
@@ -229,17 +227,17 @@ class TestIntegration2:
                         ('x-api-key', '18f22441-2c87-6d8e-fb2a-3fa670837b5a'),
                         ('x-api-user', 'cd18fc9f-b649-4384-932a-f3bda6fe8102'),
                         ('Cookie', "<redacted>")],
-        before_record_request=helper.handle_request(),
-        before_record_response=helper.scrub_response(debug=False),
+        before_record_request=HELPER.handle_request(),
+        before_record_response=HELPER.scrub_response(debug=False),
         record_on_exception=False,
         decode_compressed_response=True
     )
 
     # pylint: disable=redefined-outer-name, unused-argument
     @pytest.mark.parametrize("pickle_in", [empty_pickle()], indirect=True)
-    def test_alias_already_used(self,
-                                fake_or_real_file,
-                                pickle_in):
+    def test(self,
+             auth_cfg,
+             pickle_in):
         # pylint: enable=redefined-outer-name, unused-argument
         ''' you need to initialize logging,
             otherwise you will not see anything from vcrpy '''
@@ -247,7 +245,7 @@ class TestIntegration2:
         vcr_log = logging.getLogger("vcr")
         vcr_log.setLevel(logging.DEBUG)
 
-        with self.testVcr.use_cassette("test.yaml"):
+        with self.test_vcr.use_cassette("test.yaml"):
             # patch post to habitica with fake
             patch(requests, 'post', replacement=fake_post)
 
@@ -272,10 +270,10 @@ class TestIntegration2:
             dump_dict = captor(ANY(dict))
             verify(pkl_out, times=1).dump(dump_dict)
             data = dump_dict.value
-            assert bool(data)
+            assert len(data.keys()) == 63
 
             # check # of post to habitica
-            assert post_count == 1
+            assert POST_COUNT == 1
 
             # clean-up
             unstub()

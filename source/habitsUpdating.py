@@ -3,11 +3,12 @@ from hab_task import HabTask
 import sys, getopt
 import main
 import requests
+import config
 
 def run_task():
     import main
     from habitsUpdating import get_all_habits
-    auth = main.get_habitica_login('auth.cfg')
+    auth = config.get_habitica_login('auth.cfg')
     habits, response = get_all_habits(auth)
     for i in range(len(habits)):
         print('[%s] %s'% (i, habits[i].name))

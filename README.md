@@ -34,7 +34,7 @@ If you'd like to change how the sync interprets difficulty or priority, please e
 
 ## USAGE
 
-Try running `python oneWaySync.py` in your terminal. (You have to run the command from the same directory that auth.cfg exists in).
+Try running `python one_way_sync.py` in your terminal. (You have to run the command from the same directory that auth.cfg exists in).
 
 ## Credit
 

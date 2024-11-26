@@ -1,19 +1,18 @@
 #!/usr/bin/env python
 
-# import todoist
 # import re
+from datetime import timedelta
 import json
 import os
-import logging
-import configparser
 import sys
 import pickle
-from datetime import datetime
-import requests
 import time
+import requests
 from dateutil import parser
 from hab_task import HabTask
-from todo_task import TodTask
+import config
+
+from dates import parse_date_utc
 
 # TODO: Main.py overdue for an overhaul! Let's see.
 # Version control, basic paths
@@ -34,11 +33,11 @@ SECTION_CACHE_QUEST = 'Quest'
 List of utilities and what they do: scroll down for specific things
 add_hab_id:
     used to add a new alias (usually the tod ID number) to a habitica task
-check_matchDict:
+check_match_dict:
 
-check_newMatches:
+check_new_matches:
 
-clean_matchDict:
+clean_match_dict:
 
 complete_hab:
 
@@ -48,8 +47,6 @@ get_all_habtasks:
 
 get_hab_fromID:
     Takes an integer, like a tod ID, and calls hab tasks by that alias from API.
-get_habitica_login:
-    Takes auth document and logs the user into todoist and habitica for active work.
 get_uniqs:
 
 make_daily_from_tod:
@@ -76,9 +73,9 @@ tod_login:
 
 update_hab:
 
-update_hab_matchDict:
+update_hab_match_dict:
 
-update_tod_matchDict:
+update_tod_match_dict:
 
 write_hab_task:
     takes HabTask object, writes to habitica API (used to make a new task in habitica)
@@ -91,50 +88,50 @@ Small utilities written by me start here.
 
 
 def add_hab_id(tid, hab):
-    import requests
-    auth = get_habitica_login('auth.cfg')
+    '''Add alias to Habitica task? '''
+    auth = config.get_habitica_login('auth.cfg')
     url = 'https://habitica.com/api/v3/tasks/'
     hab.task_dict['alias'] = str(tid)
     url += hab.task_dict['id']
     data = json.dumps(hab.task_dict)
-    r = requests.put(headers=auth, url=url, data=data)
-    return r
+    response = requests.put(headers=auth, url=url, data=data)
+    return response
 
 
-def check_matchDict(matchDict):
+def check_match_dict(match_dict):
     """Troubleshooting"""
-    for t in matchDict:
-        if matchDict[t].complete == 0:
-            if t.completed == False:
+    for task in match_dict:
+        if match_dict[task].complete == 0:
+            if not task.completed:
                 print("both undone")
-            elif t.completed == True:
+            elif task.completed:
                 print("hab done, tod undone")
             else:
-                print("something is wroooong check hab %s" % t)
-        elif matchDict[t].complete == 1:
-            if t.completed == False:
+                print("something is wroooong check hab %s" % task)
+        elif match_dict[task].complete == 1:
+            if not task.completed:
                 print("hab undone, tod done")
-                print(t.name)
-            elif t.completed == True:
+                print(task.name)
+            elif task.completed:
                 print("both done")
             else:
-                print("something is weird check hab %s" % t)
+                print("something is weird check hab %s" % task)
         else:
-            print("something is weird check tod %s" % t)
+            print("something is weird check tod %s" % task)
 
 
-def check_newMatches(matchDict, tod_uniq, hab_uniq):
-    # Do matching
+def check_new_matches(match_dict, tod_uniq, hab_uniq):
+    '''Check for matches between Todoist and Habitica'''
     matchesHab = []
     matchesTod = []
     for tod in tod_uniq:
         tid = tod.id
         for hab in hab_uniq:
             if tod.id == hab.alias:
-                matchDict[tid] = {}
-                matchDict[tid]['tod'] = tod
-                matchDict[tid]['hab'] = hab
-                matchDict[tid]['recurs'] = tod.recurring
+                match_dict[tid] = {}
+                match_dict[tid]['tod'] = tod
+                match_dict[tid]['hab'] = hab
+                match_dict[tid]['recurs'] = tod.recurring
                 matchesTod.append(tod)
                 matchesHab.append(hab)
         hab_uniqest = list(set(hab_uniq) - set(matchesHab))
@@ -142,53 +139,52 @@ def check_newMatches(matchDict, tod_uniq, hab_uniq):
 
     for tod_task in tod_uniqest:
         tid = tod_task.id
-        if tid not in matchDict.keys():
+        if tid not in match_dict.keys():
             for hab_task in hab_uniqest:
                 if tod_task.name == hab_task.name:
                     try:
-                        oldTid = int(hab_task.alias)
+                        old_tid = int(hab_task.alias)
                     except:
-                        oldTid = ''
-                    if oldTid in matchDict.keys():
-                        matchDict.pop(oldTid)
-                    r = add_hab_id(tid, hab_task)
-                    if not r.ok:
-                        print("Error updating hab %s! %s" % (hab.name, r.reason))
+                        old_tid = ''
+                    if old_tid in match_dict.keys():
+                        match_dict.pop(old_tid)
+                    response = add_hab_id(tid, hab_task)
+                    if not response.ok:
+                        print("Error updating hab %s! %s" % (hab_task.name, response.reason))
                     else:
-                        matchDict[tid] = {}
-                        matchDict[tid]['hab'] = hab_task
-                        matchDict[tid]['tod'] = tod_task
-                        matchDict[tid]['recurs'] = tod_task.recurring
-    return matchDict
+                        match_dict[tid] = {}
+                        match_dict[tid]['hab'] = hab_task
+                        match_dict[tid]['tod'] = tod_task
+                        match_dict[tid]['recurs'] = tod_task.recurring
+    return match_dict
 
 
-def clean_matchDict(matchDict):
-    for tid in matchDict:
-        if 'recurs' not in matchDict[tid].keys():
-            matchDict[tid]['recurs'] = matchDict[tid]['tod'].recurring
-        hab = matchDict[tid]['hab']
-        tod = matchDict[tid]['tod']
-    return matchDict
+def clean_match_dict(match_dict):
+    '''Unsure if it does what it says'''
+    for tid in match_dict:
+        if 'recurs' not in match_dict[tid].keys():
+            match_dict[tid]['recurs'] = match_dict[tid]['tod'].recurring
+    return match_dict
 
 
 def complete_hab(hab):
-    auth = get_habitica_login('auth.cfg')
+    auth = config.get_habitica_login('auth.cfg')
     url = 'https://habitica.com/api/v3/tasks/'
     url += hab.task_dict['id']
     url += '/score/up/'
     hab_dict = hab.task_dict
     hab_dict['completed'] = True
     data = json.dumps(hab_dict)
-    r = requests.post(headers=auth, url=url, data=data)
-    return r
+    response = requests.post(headers=auth, url=url, data=data)
+    return response
 
 
 def delete_hab(hab):
-    auth = get_habitica_login('auth.cfg')
+    auth = config.get_habitica_login('auth.cfg')
     url = 'https://habitica.com/api/v3/tasks/'
     url += hab.task_dict['id']
-    r = requests.delete(headers=auth, url=url)
-    return r
+    response = requests.delete(headers=auth, url=url)
+    return response
 
 
 def get_all_habtasks(auth):
@@ -204,7 +200,8 @@ def get_all_habtasks(auth):
     # keeping records of all our tasks
     hab_tasks = []
 
-    # No habits right now, I'm afraid, in hab_tasks--Todoist gets upset. So we're going to make a list of dailies and todos instead...
+    # No habits right now, I'm afraid, in hab_tasks--Todoist gets upset. So we're going to make a list of dailies and
+    # todos instead...
     for task in hab_tasklist:
         item = HabTask(task)
         if item.category == 'reward':
@@ -217,7 +214,7 @@ def get_all_habtasks(auth):
 
 
 def get_hab_fromID(tid):
-    auth = get_habitica_login('auth.cfg')
+    auth = config.get_habitica_login('auth.cfg')
     url = 'https://habitica.com/api/v3/tasks/'
     url += str(tid)
     response = requests.get(headers=auth, url=url)
@@ -230,49 +227,14 @@ def get_hab_fromID(tid):
     return hab
 
 
-def get_habitica_login(configfile):
-    """Get Habitica authentication data from the AUTH_CONF file."""
-
-    logging.debug('Loading habitica auth data from %s' % configfile)
-
-    try:
-        cf = open(configfile)
-    except IOError:
-        logging.error("Unable to find '%s'." % configfile)
-        exit(1)
-
-    config = configparser.SafeConfigParser()
-    config.readfp(cf)
-
-    cf.close()
-
-    # Get data from config
-    rv = {}
-    try:
-        rv = {'url': config.get('Habitica', 'url'),
-              'x-api-user': config.get('Habitica', 'login'),
-              'x-api-key': config.get('Habitica', 'password')}
-
-    except configparser.NoSectionError:
-        logging.error("No 'Habitica' section in '%s'" % configfile)
-        exit(1)
-
-    except configparser.NoOptionError as e:
-        logging.error("Missing option in auth file '%s': %s"
-                      % (configfile, e.message))
-        exit(1)
-
-    # Return auth data as a dictionnary
-    return rv
-
-
-def get_uniqs(matchDict, tod_tasks):
-    # TODO: Rename function
+# TODO: Rename function
+def get_uniqs(match_dict, tod_tasks):
+    '''Find tasks not in match_dict '''
     tod_uniq = []
 
     for tod in tod_tasks:
         tid = tod.id
-        if tid not in matchDict.keys():
+        if tid not in match_dict.keys():
             if not tod.is_completed:
                 tod_uniq.append(tod)
 
@@ -351,12 +313,12 @@ def make_hab_from_tod(tod_task):
     new_hab = {'type': 'todo'}
     new_hab['text'] = tod_task.name
     try:
-        dateListed = list(tod_task.task_dict['due'])
-        dueNow = str(parser.parse(dateListed).date())
+        date_listed = list(tod_task.task_dict['due'])
+        due_now = str(parser.parse(date_listed).date())
     except:
-        dueNow = ''
+        due_now = ''
 
-    new_hab['date'] = dueNow
+    new_hab['date'] = due_now
     new_hab['alias'] = tod_task.id
     if tod_task.priority == 1:
         new_hab['priority'] = '2'
@@ -384,13 +346,13 @@ def make_tod_from_hab(hab):
     else:
         tod['priority'] == 4
 '''
-#def matchDates(matchDict):
+#def matchDates(match_dict):
     #'''Error/debugging script to match all hab dates with tod dates.'''
     #from main import sync_hab2todo
 '''
-    for tid in matchDict:
-        tod = matchDict[tid]['tod']
-        hab = matchDict[tid]['hab']
+    for tid in match_dict:
+        tod = match_dict[tid]['tod']
+        hab = match_dict[tid]['hab']
         try:
             hab_date = parse_date_utc(hab.date).date()
         except:
@@ -404,50 +366,50 @@ def make_tod_from_hab(hab):
         rList = []
         if tod_date != hab_date:
             print(tod.name)
-            newHab = sync_hab2todo(hab,tod)
-            r = update_hab(newHab)
-            matchDict[tid]['hab'] = newHab
-            rList.append(r,hab.name)
+            new_hab = sync_hab2todo(hab,tod)
+            response = update_hab(new_hab)
+            match_dict[tid]['hab'] = new_hab
+            rList.append(response,hab.name)
 '''
 
 
 def openMatchDict():
     input_file = 'oneWay_matchDict.pkl'
-    matchDict = {}
+    match_dict = {}
     try:
         if os.path.getsize(input_file) > 0:
             pkl_file = open(input_file, 'rb')
             pkl_load = pickle.Unpickler(pkl_file)
-            matchDict = pkl_load.load()
+            match_dict = pkl_load.load()
             pkl_file.close()
-    except OSError as e:
-        print(e)
+    except OSError as error:
+        print(error)
 
-    for tid in matchDict:
-        if 'recurs' not in matchDict[tid].keys():
-            tod = matchDict[tid]['tod']
-            matchDict[tid]['recurs'] = tod.recurring
-    return matchDict
+    for tid in match_dict:
+        if 'recurs' not in match_dict[tid].keys():
+            tod = match_dict[tid]['tod']
+            match_dict[tid]['recurs'] = tod.recurring
+    return match_dict
 
 
 def openMatchDictTwo():
-    import pickle
     try:
-        pkl_file = open('twoWay_matchDict.pkl','rb')
+        pkl_file = open('twoWay_matchDict.pkl', 'rb')
         pkl_load = pickle.Unpickler(pkl_file)
-        matchDict = pkl_load.load()
+        match_dict = pkl_load.load()
         pkl_file.close()
     except:
-        matchDict = {}
+        match_dict = {}
 
-    for tid in matchDict:
-        if 'recurs' not in matchDict[tid].keys():
-            tod = matchDict[tid]['tod']
-            matchDict[tid]['recurs'] = tod.recurring
-    return matchDict
+    for tid in match_dict:
+        if 'recurs' not in match_dict[tid].keys():
+            tod = match_dict[tid]['tod']
+            match_dict[tid]['recurs'] = tod.recurring
+    return match_dict
 
 
-def purge_habs(hab_uniq, matchDict):
+def purge_habs(hab_uniq):
+    '''Unsure what this does '''
     hab_uniqest = []
     cruft = []
     for hab in hab_uniq:
@@ -473,8 +435,6 @@ def sync_hab2todo(hab, tod):
 
 
 def sync_hab2todo_daily(hab, tod):
-    from dates import parse_date_utc
-    from datetime import timedelta
     # import pytz
     habDict = hab.task_dict
     if tod.priority == 4:
@@ -488,13 +448,12 @@ def sync_hab2todo_daily(hab, tod):
     if hab.due.date() != (tod.due.date() - timedelta(days=1)):
         habDict['startDate'] = str(tod.due.date() - timedelta(days=1))
 
-    newHab = HabTask(habDict)
+    new_hab = HabTask(habDict)
 
-    return newHab
+    return new_hab
 
 
 def sync_hab2todo_todo(hab, tod):
-    from dates import parse_date_utc
     habDict = hab.task_dict
     if tod.priority == 4:
         habDict['priority'] = 2
@@ -519,7 +478,7 @@ def sync_hab2todo_todo(hab, tod):
     return new_hab
 
 '''
-def syncHistories(matchDict):
+def syncHistories(match_dict):
 
     """
     I wanted to see if I could convince recurring habs and tods to sync based on history.
@@ -532,15 +491,15 @@ def syncHistories(matchDict):
     from main import tod_login
     tod_user = tod_login('auth.cfg')
     todList = {}
-    for tid in matchDict:
+    for tid in match_dict:
         try:
-            matchDict[tid]['recurs']
+            match_dict[tid]['recurs']
         except:
             print(tid)
-            matchDict[tid]['recurs'] = matchDict[tid]['tod'].recurring
-        if matchDict[tid]['recurs'] == 'Yes':
-            hab = matchDict[tid]['hab']
-            tod = matchDict[tid]['tod']
+            match_dict[tid]['recurs'] = match_dict[tid]['tod'].recurring
+        if match_dict[tid]['recurs'] == 'Yes':
+            hab = match_dict[tid]['hab']
+            tod = match_dict[tid]['tod']
             habHistory = hab.history
             todHistory = tod.history
             try:
@@ -554,13 +513,13 @@ def syncHistories(matchDict):
                 lastHab = hab.due.date() - timedelta(days=1)
             lastNow = datetime.today().date()
             if lastHab > hab.due.date():
-                newHab = sync_hab2todo(hab, tod)
-                r = update_hab(newHab)
+                new_hab = sync_hab2todo(hab, tod)
+                response = update_hab(new_hab)
             if lastTod != lastHab:
                 if lastHab < lastTod and hab.dueToday == True:
                     print("Updating daily hab %s to match tod" % tod.name)
-                    r = complete_hab(hab)
-                    print(r)
+                    response = complete_hab(hab)
+                    print(response)
                 elif lastTod < lastHab: # and hab.dueToday == False:
                     if lastTod < lastNow == False:
                         print("Updating daily tod %s to match hab" % tod.name)
@@ -581,14 +540,13 @@ def syncHistories(matchDict):
                     print(lastHab)
                     print(hab.due)
     tod_user.commit()
-    return matchDict
+    return match_dict
 '''
 
 
 def update_hab(hab):
     # TODO: Only update when there are actual changes
-    from main import get_habitica_login
-    auth = get_habitica_login('auth.cfg')
+    auth = config.get_habitica_login('auth.cfg')
     url = 'https://habitica.com/api/v3/tasks/'
     try:
         tag = str(hab.task_dict['alias'])
@@ -598,17 +556,14 @@ def update_hab(hab):
     wanted_keys = ['alias', 'text', 'priority', 'date']
     data = {x: hab.task_dict[x] for x in wanted_keys if x in hab.task_dict}
     time.sleep(2)
-    r = requests.put(headers=auth, url=url, data=data)
-    if r.ok == 'No':
-        print(r.text)
-    return r
+    response = requests.put(headers=auth, url=url, data=data)
+    if response.ok == 'No':
+        print(response.text)
+    return response
 
 
-def update_hab_matchDict(hab_tasks, matchDict):
-    from main import delete_hab
-    from main import sync_hab2todo
-    from main import update_hab
-    from dates import parse_date_utc
+def update_hab_match_dict(hab_tasks, match_dict):
+    '''Update habitica task in matchDict? '''
     hardness = []
     tid_list = []
     expired_tids = []
@@ -622,65 +577,66 @@ def update_hab_matchDict(hab_tasks, matchDict):
             except:
                 aliasError.append(hab)
                 tid = None
-            if tid in matchDict.keys():
+            if tid in match_dict.keys():
                 try:
                     date1 = hab.due.date()
                 except:
                     date1 = ''
                 try:
-                    date2 = matchDict[tid]['hab'].due.date()
+                    date2 = match_dict[tid]['hab'].due.date()
                 except:
                     date2 = ''
 
-                if date1 != date2 and matchDict[tid]['recurs'] == 'No':
-    #if the hab I see and the matchDict don't agree... sync to the todoist task
+                if date1 != date2 and match_dict[tid]['recurs'] == 'No':
+                    # if the hab I see and the match_dict don't agree... sync to the todoist task
                     print(date1)
                     print(date2)
-                    newHab = sync_hab2todo(hab,matchDict[tid]['tod'])
-                    r = update_hab(newHab)
+                    new_hab = sync_hab2todo(hab, match_dict[tid]['tod'])
+                    response = update_hab(new_hab)
                     print('Dates wrong; updated hab %s !' % hab.name)
-                    print(r)
+                    print(response)
 
-                if hab.hardness != matchDict[tid]['hab'].hardness:
+                if hab.hardness != match_dict[tid]['hab'].hardness:
                     print("hardness mismatch!")
                     hardness.append(tid)
-                    newHab = sync_hab2todo(hab,matchDict[tid]['tod'])
-                    r = update_hab(newHab)
-                    print(r)
+                    new_hab = sync_hab2todo(hab, match_dict[tid]['tod'])
+                    response = update_hab(new_hab)
+                    print(response)
                     print('Updated hab %s !' % hab.name)
 
-                matchDict[tid]['hab'] = hab
+                match_dict[tid]['hab'] = hab
     '''
     for hab in aliasError:
-        for tid in matchDict:
-            matchHab = matchDict[tid]['hab']
+        for tid in match_dict:
+            matchHab = match_dict[tid]['hab']
             if hab.name == matchHab.name:
                 expired_tids.append(tid)
     '''
-    for tid in matchDict:
-        hab = matchDict[tid]['hab']
+    for tid in match_dict:
+        hab = match_dict[tid]['hab']
         if tid not in tid_list:
             expired_tids.append(tid)
 
     for tid in expired_tids:
-        if tid in matchDict.keys():
-            if not matchDict[tid]['hab'].completed:
-                matchDict.pop(tid)
+        if tid in match_dict.keys():
+            if not match_dict[tid]['hab'].completed:
+                match_dict.pop(tid)
 
-    return matchDict
+    return match_dict
 
 
-def update_tod_matchDict(tod_tasks, matchDict):
+def update_tod_match_dict(tod_tasks, match_dict):
+    '''Update Todoist tasks in match dictionary? '''
     tid_list = []
     for tod in tod_tasks:
         tid_list.append(tod.id)
-        if tod.id in matchDict.keys():
-            matchDict[tod.id]['tod'] = tod
-    for tid in list(matchDict):
+        if tod.id in match_dict.keys():
+            match_dict[tod.id]['tod'] = tod
+    for tid in list(match_dict):
         if tid not in tid_list:
-            matchDict.pop(tid)
+            match_dict.pop(tid)
 
-    return matchDict
+    return match_dict
 
 
 def write_hab_task(task):
@@ -688,8 +644,8 @@ def write_hab_task(task):
     writes a task, if inserted, to Habitica API as a todo.
     To be added: functionality allowing you to specify things like difficulty
     """
-    auth = get_habitica_login('auth.cfg')
+    auth = config.get_habitica_login('auth.cfg')
     url = 'https://habitica.com/api/v3/tasks/user/'
 #    hab = json.dumps(task)
-    r = requests.post(headers=auth, url=url, data=task)
-    return r
+    response = requests.post(headers=auth, url=url, data=task)
+    return response

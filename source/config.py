@@ -14,16 +14,16 @@ def get_todoist_token(configfile):
     # Get data from config
     if 'Todoist' in config.sections():
         try:
-            tt = config.get('Todoist', 'api-token')
+            todo_token = config.get('Todoist', 'api-token')
 
-        except configparser.NoOptionError as e:
-            logging.error("Missing option in auth file '" + configfile + "': " + e.message)
+        except configparser.NoOptionError as error:
+            logging.error("Missing option in auth file '" + configfile + "': " + error.message)
             sys.exit(1)
     else:
         logging.error("No 'Todoist' section in '%s'", configfile)
         sys.exit(1)
 
-    return tt
+    return todo_token
 
 
 def get_habitica_login(configfile):
@@ -35,19 +35,19 @@ def get_habitica_login(configfile):
     config.read(configfile)
 
     # Get data from config
-    rv = {}
+    auth_data = {}
     if 'Habitica' in config.sections():
         try:
-            rv = {'url': config.get('Habitica', 'url'),
-                  'x-api-user': config.get('Habitica', 'login'),
-                  'x-api-key': config.get('Habitica', 'password')}
+            auth_data = {'url': config.get('Habitica', 'url'),
+                         'x-api-user': config.get('Habitica', 'login'),
+                         'x-api-key': config.get('Habitica', 'password')}
 
-        except configparser.NoOptionError as e:
-            logging.error("Missing option in auth file " + configfile + ":" + e.message)
+        except configparser.NoOptionError as error:
+            logging.error("Missing option in auth file " + configfile + ":" + error.message)
             sys.exit(1)
     else:
         logging.error("No 'Habitica' section in '%s'", configfile)
         sys.exit(1)
 
     # Return auth data as a dictionary
-    return rv
+    return auth_data
