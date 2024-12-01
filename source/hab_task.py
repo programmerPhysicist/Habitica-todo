@@ -64,15 +64,15 @@ class HabTask(object):
         if self.__task_dict['type'] == 'todo' and self.__task_dict['date'] != '':
             date = parser.parse(self.__task_dict['date'])
             return date
-        elif self.__task_dict['type'] == 'daily': 
+        elif self.__task_dict['type'] == 'daily':
             if self.__task_dict['isDue'] == True:
                 date = datetime.now().replace(tzinfo=pytz.utc,hour=0,minute=0,second=0,microsecond=0)
             elif self.__task_dict['nextDue'] != '':
                 date = parser.parse(self.__task_dict['nextDue'][0])
-            return date 
+            return date
         else:
             return ''
-        
+
     @property
     #When did the daily start running? (That is, is it active now?)
     def starting(self):
@@ -82,13 +82,13 @@ class HabTask(object):
             start = parser.parse(self.__task_dictself.__task_dict['startDate'])
         else:
             start = ''
-        return start 
-    
+        return start
+
     @starting.setter
     def starting(self, starting):
         """ Task name """
         self.__task_dict['startDate'] = starting
-    
+
     @property
     #Is this a weekly daily or something that repeats every X days?
     def rep_pattern(self):
@@ -96,12 +96,12 @@ class HabTask(object):
             return self.__task_dict['frequency']
         else:
             return ''
-   
+
     @rep_pattern.setter
     def rep_pattern(self, rep):
         """ Task name """
         self.__task_dict['frequency'] = rep
-   
+
     @property
     #What days of the week does this daily repeat--or in how many days?
     def dailies_due(self):
@@ -131,7 +131,7 @@ class HabTask(object):
                 return dayCycle
         else:
             return ''
-    
+
     @property
     #Is this task due today?
     def due_now(self):
@@ -145,7 +145,7 @@ class HabTask(object):
     #is task complete? 0 for no, 1 for yes
     def complete(self):
         return self.__task_dict['checked']
-    
+
     @property
     def id(self):
         """ Task id """
@@ -161,7 +161,7 @@ class HabTask(object):
             return "B"
         elif diffID == 1:
             return "C"
-        else: 
+        else:
             return "D"
 
 
@@ -174,7 +174,7 @@ class HabTask(object):
     def name(self, name):
         """ Task name """
         self.__task_dict['text'] = name
-    
+
     @property
     def alias(self):
         """ Task name """
@@ -217,7 +217,7 @@ class HabTask(object):
     @category.setter
     def category(self, name):
         """ Task name """
-        self.__task_dict['type'] = name        
+        self.__task_dict['type'] = name
 
     @property
     def description(self):
@@ -234,6 +234,7 @@ class HabTask(object):
         """ Task completed """
         return self.__task_dict['completed']
 
+    # TODO: Doesn't work
     @completed.setter
     def completed(self, completed):
         """ Task completed """

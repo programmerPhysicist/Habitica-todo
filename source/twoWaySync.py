@@ -14,6 +14,7 @@ import random
 import json
 from hab_task import HabTask
 from todo_task import TodTask
+import config
 from datetime import datetime
 from datetime import timedelta
 from dateutil import parser
@@ -26,12 +27,12 @@ tod_projects = tod_user.projects.all()
 tod_inboxID = tod_projects[0].data['id']
 
 #Telling the site where the config stuff for Habitica can go and get a list of habitica tasks...
-auth = main.get_started('auth.cfg')  
+auth = config.get_habitica_login('auth.cfg')
 
 #Getting all complete and incomplete habitica dailies and todos
 hab_tasks, r1 = main.get_all_habtasks(auth)
 
-#Okay, now I need a list of todoist tasks. How do achieve that. 
+#Okay, now I need a list of todoist tasks. How do achieve that.
 tod_tasks = []
 tod_items = tod_user.items
 tod_tasklist = tod_items.all()
@@ -39,19 +40,19 @@ for i in range(0, len(tod_tasklist)):
     tod_tasks.append(TodTask(tod_tasklist[i].data))
 
 """
-Okay, I want to write a little script that checks whether or not a task is there or not and, if not, ports it. 	
+Okay, I want to write a little script that checks whether or not a task is there or not and, if not, ports it.
 """
 matchDict = main.openMatchDictTwo()
 
 #Also, update lists of tasks with matchDict file...
-matchDict = main.update_tod_matchDict(tod_tasks, matchDict)
-matchDict = main.update_hab_matchDict(hab_tasks, matchDict)
+matchDict = main.update_tod_match_dict(tod_tasks, matchDict)
+matchDict = main.update_hab_match_dict(hab_tasks, matchDict)
 
-#We'll want to just... pull all the unmatched completed tasks out of our lists of tasks. Yeah? 
+#We'll want to just... pull all the unmatched completed tasks out of our lists of tasks. Yeah?
 tod_uniq, hab_uniq = main.get_uniqs(matchDict, tod_tasks, hab_tasks)
 
 #Okay, so what if there are two matched tasks in the two uniq lists that really should be paired?
-matchDict = main.check_newMatches(matchDict,tod_uniq,hab_uniq)
+matchDict = main.check_new_matches(matchDict, tod_uniq, hab_uniq)
 
 tod_uniq, hab_uniq = main.get_uniqs(matchDict, tod_tasks, hab_tasks)
 
@@ -77,7 +78,7 @@ for tod in tod_uniq:
 
 #And we do the same with tasks unique to habitica, to tods...
 for hab in hab_uniq:
-    try: 
+    try:
         tid = int(hab.alias)
         #tid = hab.alias
     except:
@@ -110,7 +111,7 @@ for tid in matchDict:
     tod = matchDict[tid]['tod']
     hab = matchDict[tid]['hab']
     if tod.recurring == 'No':
-        if tod.complete == 0: 
+        if tod.complete == 0:
             try:
                 hab.completed
             except:
@@ -122,7 +123,7 @@ for tid in matchDict:
                 fix_tod = tod_user.items.get_by_id(tid)
                 fix_tod.close()
                 print('completed tod %s' % tod.name)
-            else: 
+            else:
                 print("ERROR: check HAB %s" % tid)
         elif tod.complete == 1:
             if hab.completed == False:
@@ -135,7 +136,7 @@ for tid in matchDict:
                     print(r.reason)
             elif hab.completed == True:
                 expired_tids.append(tid)
-            else: 
+            else:
                 print("ERROR: check HAB %s" % tid)
         else:
             print("ERROR: check TOD %s" % tid)

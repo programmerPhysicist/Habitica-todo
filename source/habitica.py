@@ -4,6 +4,7 @@
 import requests
 from hab_task import HabTask
 
+
 def get_all_habtasks(auth):
     # Todoist tasks are, I think, classes. Let's make Habitica tasks classes, too.
     url = 'https://habitica.com/api/v3/tasks/user/'
@@ -17,6 +18,15 @@ def get_all_habtasks(auth):
         hab_tasklist = hab_raw['data']
     else:
         hab_tasklist = []
+        print(response.reason)
+
+    # Get completed tasks
+    auth['type'] = "completedTodos"
+    response = requests.get(url, headers=auth)
+    if response.ok:
+        hab_raw = response.json()
+        hab_tasklist += hab_raw['data']
+    else:
         print(response.reason)
 
     # keeping records of all our tasks

@@ -8,7 +8,7 @@ source/hab_task.py
 source/habitsUpdating.py
 source/main.py
 source/manaPull.py
-source/oneWaySync.py
+source/one_way_sync.py
 source/task.py
 source/todo_task.py
 source/twoWaySync.py
