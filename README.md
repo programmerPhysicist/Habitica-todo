@@ -1,6 +1,6 @@
 # Habitica+Todoist
 
-## __:warning: This script is a work in progress, and may or may not currently work!__
+## __:warning: Alpha script!__
 
 This is intended to be a two-way sync of Habitica and Todoist. Any tasks that can't be found in both services should appear on the others, with the same status. If you complete a task on one service, it should appear as completed on another. Tasks that are created on Habitica should be sent to the 'Inbox' project on Todoist.
 
