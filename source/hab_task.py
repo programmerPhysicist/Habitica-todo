@@ -74,7 +74,7 @@ class HabTask(object):
             return ''
 
     @property
-    #When did the daily start running? (That is, is it active now?)
+    # When did the daily start running? (That is, is it active now?)
     def starting(self):
         from dateutil import parser
         import datetime

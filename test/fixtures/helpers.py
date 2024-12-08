@@ -12,8 +12,8 @@ class TestHelpers:
 
     @staticmethod
     def get_root():
-        pwd = os.getcwd()
-        root = pwd.split("Project_Hype-Berry")[0]
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        root = dir_path.split("Project_Hype-Berry")[0]
         root = os.path.join(root, "Project_Hype-Berry")
         return root
 
@@ -134,15 +134,19 @@ class TestHelpers:
             habitica_uri1 = "https://habitica.com/api/v3/tasks/user/"
             habitica_uri2 = "https://habitica.com/api/v3/tasks"
 
-            cookie = response['headers']['Set-Cookie']
-            elem_num = len(cookie)
-            for i in range(elem_num):
-                response['headers']['Set-Cookie'][i] = "<redacted>"
+            if 'Set-Cookie' in response['headers'].keys():
+                cookie = response['headers']['Set-Cookie']
+                elem_num = len(cookie)
+                for i in range(elem_num):
+                    response['headers']['Set-Cookie'][i] = "<redacted>"
 
             response['headers']['X-Amz-Cf-Id'] = "<redacted>"
-
             body = response['body']['string']
-            s_json = json.loads(body)
+            try:
+                s_json = json.loads(body)
+            except json.JSONDecodeError as e:
+                print(e)
+                return response
             resp_type = ""
             if cls.uri == habitica_uri1 and s_json['success']:
                 s_json = cls.scrub_habitica_resp(cls, s_json)

@@ -1,9 +1,12 @@
 # pylint: disable=missing-function-docstring, missing-module-docstring, invalid-name, missing-class-docstring
 # pylint: disable=global-statement
+import os
 import logging
+from pathlib import Path
 import pickle
+import yaml
 import pytest
-from mockito import when, mock, unstub, when2, verify, captor, ANY, patch
+from mockito import when, mock, unstub, when2, verify, captor, ANY, patch, arg_that
 import vcr
 import requests
 
@@ -18,6 +21,7 @@ from one_way_sync import sync_todoist_to_habitica
 # initialization
 HELPER = TestHelpers()
 POST_COUNT = 0
+filepath = Path(os.path.join(TestHelpers.get_root(), 'test/fixtures/dump.yaml'))
 
 
 def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-argument, redefined-outer-name
@@ -40,7 +44,49 @@ def fake_post(url, data=None, json=None, **kwargs): # pylint: disable=unused-arg
     return response
 
 
-class TestTaskAliasAlreadyUsed:
+def save_pickle_for_test(dump_dict):
+    '''Instead of dumping to pickle, we will
+       be saving to human readable yaml to use
+       in future tests'''
+    if filepath.is_file():
+        with open(filepath, 'w') as file:
+            yaml.dump(dump_dict, file)
+            print("INFO: Created yaml... ")
+    else:
+        print("INFO: Yaml already exists!")
+
+
+def read_pickle():
+    if filepath.is_file():
+        with open(filepath, 'r') as file:
+            match_dict = yaml.load(file, Loader=yaml.Loader)
+    else:
+        match_dict = {}
+
+    inputs = {'pickle_tasks': match_dict}
+    return inputs
+
+
+@pytest.fixture
+def expected(request):
+    return request.param
+
+
+@pytest.fixture
+def iters(request):
+    return request.param
+
+
+@pytest.fixture
+def clean_up():
+    # do nothing before test
+
+    yield
+    # clean-up needed
+    unstub()
+
+
+class TestEndToEndIntegration:
     test_vcr = vcr.VCR(
         serializer='yaml',
         cassette_library_dir=TestHelpers.get_cassette_dir(),
@@ -57,10 +103,15 @@ class TestTaskAliasAlreadyUsed:
     )
 
     # pylint: disable=redefined-outer-name, unused-argument
-    @pytest.mark.parametrize("pickle_in", [empty_pickle()], indirect=True)
-    def test_task_alias_already_used(self,
-                                     auth_cfg,
-                                     pickle_in):
+    @pytest.mark.parametrize("pickle_in,expected,iters",
+                             [(empty_pickle(), 1, 0), (read_pickle(), 2, 61)],
+                             indirect=True)
+    def test_end_to_end(self,
+                        auth_cfg,
+                        pickle_in,
+                        expected,
+                        iters,
+                        clean_up):
         # pylint: enable=redefined-outer-name, unused-argument
         ''' you need to initialize logging,
             otherwise you will not see anything from vcrpy '''
@@ -86,6 +137,10 @@ class TestTaskAliasAlreadyUsed:
             when(pickle).Pickler(...).thenReturn(pkl_out)
             when(pkl_out).dump(...)
 
+            # mock put
+            response = mock({'status': 200, 'ok': True}, spec=requests.Response)
+            when(requests).put(...).thenReturn(response)
+
             # execute
             sync_todoist_to_habitica()
 
@@ -93,10 +148,19 @@ class TestTaskAliasAlreadyUsed:
             dump_dict = captor(ANY(dict))
             verify(pkl_out, times=1).dump(dump_dict)
             data = dump_dict.value
+            save_pickle_for_test(data)
             assert len(data.keys()) == 63
 
-            # check # of post to habitica
-            assert POST_COUNT == 1
+            # check put
+            the_url = captor(ANY(str))
+            the_headers = captor(ANY(dict))
+            if iters != 0:
+                verify(requests, times=iters).put(url=the_url,
+                                                  data=arg_that(lambda arg: arg['date'] is None),
+                                                  headers=the_headers)
 
-            # clean-up
-            unstub()
+                verify(requests, times=4).put(url=the_url,
+                                              data=arg_that(lambda arg: arg['date'] is not None),
+                                              headers=the_headers)
+            # check # of post to habitica
+            assert POST_COUNT == expected

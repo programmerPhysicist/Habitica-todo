@@ -12,6 +12,7 @@ just not for recurring todo tasks or dailies. I'm workin' on that.
 import pickle
 import time
 import json
+import requests
 
 import main
 from todo_task import TodTask
@@ -28,6 +29,8 @@ def get_tasks(token):
     try:
         tasks = api.get_tasks()
     except ConnectionError as error:
+        print(error)
+    except requests.exceptions.HTTPError as error:
         print(error)
     return tasks, api
 
