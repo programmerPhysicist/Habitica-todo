@@ -13,6 +13,8 @@ import pickle
 import time
 import json
 import requests
+from tzlocal import get_localzone
+import pytz
 
 import main
 from todo_task import TodTask
@@ -65,8 +67,20 @@ def sync_todoist_to_habitica():
     todoist_tasks, todo_api = get_tasks(todo_token) # todoist_tasks used to be tod_tasks
 
     tod_tasks = []
-    for i in range(0, len(todoist_tasks)):
-        tod_tasks.append(TodTask(todoist_tasks[i]))
+    tz = None
+    for task in todoist_tasks:
+        if task.due is not None:
+            tz = task.due.timezone
+        tod_tasks.append(TodTask(task))
+
+    if tz is None:
+        # assumption is that timezone from Todoist
+        # is the same as local timezone
+        tz = pytz.timezone(str(get_localzone()))
+
+        for task in tod_tasks:
+            if task.due != '':
+                task.due_date = task.due.astimezone(tz)
 
     # TODO: add back to filter out repeating older than a certain amount?
     # date stuff
@@ -101,7 +115,7 @@ def sync_todoist_to_habitica():
             new_hab = main.make_daily_from_tod(tod)
         else:
             new_hab = main.make_hab_from_tod(tod)
-        new_dict = new_hab.task_dict
+        new_dict = new_hab.get_dict()
 
         # sleep to stay within rate limits
         time.sleep(2)

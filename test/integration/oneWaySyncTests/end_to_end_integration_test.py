@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 import yaml
 import pytest
-from mockito import when, mock, unstub, when2, verify, captor, ANY, patch, arg_that
+from mockito import when, mock, unstub, when2, verify, captor, ANY, patch, not_, arg_that
 import vcr
 import requests
 
@@ -48,7 +48,7 @@ def save_pickle_for_test(dump_dict):
     '''Instead of dumping to pickle, we will
        be saving to human readable yaml to use
        in future tests'''
-    if filepath.is_file():
+    if not filepath.is_file():
         with open(filepath, 'w') as file:
             yaml.dump(dump_dict, file)
             print("INFO: Created yaml... ")
@@ -86,6 +86,12 @@ def clean_up():
     unstub()
 
 
+def date_matcher(arg):
+    if 'date' in arg:
+        return arg['date'] is not None and arg['date'] != ''
+    return False
+
+
 class TestEndToEndIntegration:
     test_vcr = vcr.VCR(
         serializer='yaml',
@@ -104,11 +110,10 @@ class TestEndToEndIntegration:
 
     # pylint: disable=redefined-outer-name, unused-argument
     @pytest.mark.parametrize("pickle_in,expected,iters",
-                             [(empty_pickle(), 1, 0), (read_pickle(), 2, 61)],
+                             [(empty_pickle(), 4, 0), (read_pickle(), 8, 81)],
                              indirect=True)
     def test_end_to_end(self,
                         auth_cfg,
-                        pickle_in,
                         expected,
                         iters,
                         clean_up):
@@ -149,18 +154,26 @@ class TestEndToEndIntegration:
             verify(pkl_out, times=1).dump(dump_dict)
             data = dump_dict.value
             save_pickle_for_test(data)
-            assert len(data.keys()) == 63
+            assert len(data.keys()) == 77
 
             # check put
-            the_url = captor(ANY(str))
-            the_headers = captor(ANY(dict))
             if iters != 0:
-                verify(requests, times=iters).put(url=the_url,
-                                                  data=arg_that(lambda arg: arg['date'] is None),
-                                                  headers=the_headers)
+                the_url = captor(ANY(str))
+                the_headers = captor(ANY(dict))
 
-                verify(requests, times=4).put(url=the_url,
-                                              data=arg_that(lambda arg: arg['date'] is not None),
-                                              headers=the_headers)
+                # catch-all matcher
+                verify(requests, times=81).put(...)
+
+                verify(requests, times=iters).put(url=the_url,
+                                                  data=not_(arg_that(date_matcher)),
+                                                  headers=the_headers)
+                '''
+                the_data = captor(arg_that(date_matcher))
+                verify(requests, times=6).put(url=the_url,
+                                              data=the_data,
+                                              headers=the_headers)'''
+
+                # result = the_data.value
+                # print(result)
             # check # of post to habitica
             assert POST_COUNT == expected

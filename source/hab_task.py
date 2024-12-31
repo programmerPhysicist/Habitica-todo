@@ -10,14 +10,17 @@ from __future__ import (
     unicode_literals)
 from builtins import *
 from datetime import datetime
-from tzlocal import get_localzone
+import copy
 import time
+from tzlocal import get_localzone
 import pytz
 
 from dates import parse_date_utc
 from task import CharacterAttribute, ChecklistItem, Difficulty, Task
+from dateutil import parser
 
-class HabTask(object):
+
+class HabTask():
     def __init__(self, task_dict=None):
         """ Initialise the task.
 
@@ -59,8 +62,6 @@ class HabTask(object):
     @property
     def due(self):
         """ returns UTC due date """
-        from dateutil import parser
-        from datetime import datetime
         if self.__task_dict['type'] == 'todo' and self.__task_dict['date'] != '':
             date = parser.parse(self.__task_dict['date'])
             return date
@@ -267,7 +268,6 @@ class HabTask(object):
     @property
     def due_date(self):
         """ The due date if there is one, or None. """
-        from dates import parse_date_utc
         datestr = self.__task_dict.get('date', None)
         if datestr:
             return parse_date_utc(datestr, milliseconds=True)
@@ -322,3 +322,11 @@ class HabTask(object):
             self.new_checklist_items.append({
                 'text': i.name,
                 'completed': i.checked})
+
+    def get_dict(self):
+        """ Get string representation of hab_task class. """
+        result_dict = copy.deepcopy(self.__task_dict)
+        if result_dict['date'] is not None:
+            due = result_dict['date'].strftime("%m/%d/%Y, %H:%M:%S")
+            result_dict['date'] = due
+        return result_dict

@@ -4,7 +4,7 @@ from mockito import when
 import main
 
 
-@pytest.fixture
+@pytest.fixture(scope="package", autouse=True)
 def pickle_in(request):
     ''' mock read in of pickle file'''
     match_dict = request.param['pickle_tasks']

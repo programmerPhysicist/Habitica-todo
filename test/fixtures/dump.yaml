@@ -18,11 +18,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 575
+      text: Sync from Habitica to Todoist
       type: todo
-      updatedAt: '2024-12-08T07:47:05.045Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -863.2487325627714
+      updatedAt: '2025-01-01T07:48:29.340Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -910.2595139447318
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -31,10 +31,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 1
-      content: some test task 584
+      content: Sync from Habitica to Todoist
       created_at: '2021-05-19T02:17:28.278377Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '4838805235'
@@ -67,11 +67,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 518
+      text: Run Habitica-Todo
       type: todo
-      updatedAt: '2024-12-08T07:47:07.466Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -544.2470017566112
+      updatedAt: '2025-01-01T07:48:29.361Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -591.2577831385717
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -80,10 +80,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 585
+      content: Run Habitica-Todo
       created_at: '2021-07-13T04:36:40.935458Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '4986052922'
@@ -120,11 +120,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 580
+      text: '[Todoist task: Fix Habitica-todo](https://todoist.com/showTask?id=5009433492)'
       type: todo
-      updatedAt: '2024-12-08T07:47:10.175Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -3180.2086721022506
+      updatedAt: '2025-01-01T07:48:29.326Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -3227.219453484211
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -133,10 +133,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 586
+      content: '[Todoist task: Fix Habitica-todo](https://todoist.com/showTask?id=5009433492)'
       created_at: '2021-07-22T02:36:46.476358Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '5009431616'
@@ -175,11 +175,11 @@
       tags:
       - 4eb8d4c0-12ee-4b9d-a5f9-d2342e327bb4
       - 7788a72c-7d93-4779-b355-84db9b60e9ba
-      text: some test task 581
+      text: Fix Habitica-todo
       type: todo
-      updatedAt: '2024-12-08T07:47:12.552Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -3180.2086721022506
+      updatedAt: '2025-01-01T07:48:29.325Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -3227.219453484211
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -188,10 +188,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 587
+      content: Fix Habitica-todo
       created_at: '2021-07-22T02:38:33.067793Z'
       creator_id: '33931948'
-      description: some test description
+      description: It appears neglect from maintainers has caused program to be broken
       due: null
       duration: null
       id: '5009433492'
@@ -224,11 +224,11 @@
       priority: 1.5
       reminders: []
       tags: []
-      text: some test task 577
+      text: Try out cologne samples
       type: todo
-      updatedAt: '2024-12-08T07:47:15.052Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -930.4069916798577
+      updatedAt: '2025-01-01T07:48:29.327Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -977.4177730618181
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -237,10 +237,11 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 588
+      content: Try out cologne samples
       created_at: '2021-07-23T02:54:10.039665Z'
       creator_id: '33931948'
-      description: some test description
+      description: '- If you can find one that works for you, start to wear it whenever
+        you are going to be around single women (i.e., at your singles ward).'
       due: null
       duration: null
       id: '5012141353'
@@ -273,11 +274,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 576
+      text: Order more samples from same site I ordered last time.
       type: todo
-      updatedAt: '2024-12-08T07:47:17.922Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -930.4069916798577
+      updatedAt: '2025-01-01T07:48:29.336Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -977.4177730618181
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -286,10 +287,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 589
+      content: Order more samples from same site I ordered last time.
       created_at: '2021-10-18T02:47:25.592629Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '5249822770'
@@ -322,11 +323,11 @@
       priority: 2
       reminders: []
       tags: []
-      text: some test task 574
+      text: Find online programs
       type: todo
-      updatedAt: '2024-12-08T07:47:20.225Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -658.416042255658
+      updatedAt: '2025-01-01T07:48:29.341Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -705.4268236376184
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -335,10 +336,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 590
+      content: Find online programs
       created_at: '2023-12-27T22:56:42.824640Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7537448677'
@@ -371,11 +372,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 573
+      text: Add extensions to make Habitica better
       type: todo
-      updatedAt: '2024-12-08T07:47:22.458Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -658.416042255658
+      updatedAt: '2025-01-01T07:48:29.340Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -705.4268236376184
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -384,10 +385,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 591
+      content: Add extensions to make Habitica better
       created_at: '2023-12-27T22:59:36.688300Z'
       creator_id: '33931948'
-      description: some test description
+      description: 'Important because: it potentially improves getting things done.'
       due: null
       duration: null
       id: '7537452805'
@@ -420,11 +421,11 @@
       priority: 1.5
       reminders: []
       tags: []
-      text: some test task 513
+      text: Look into ADHD coach
       type: todo
-      updatedAt: '2024-12-08T07:47:24.985Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -255.46648755313555
+      updatedAt: '2025-01-01T07:48:29.363Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -302.4772689350968
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -433,10 +434,13 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 592
+      content: Look into ADHD coach
       created_at: '2023-12-27T23:04:20.959765Z'
       creator_id: '33931948'
-      description: some test description
+      description: 'Important because: I get help with my executive dysfunction.
+
+
+        [A simpler way to organize your work - Workflowy](https://workflowy.com/#/3fa0d2b26e77)'
       due: null
       duration: null
       id: '7537459267'
@@ -469,11 +473,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 571
+      text: Upgrade Proxy
       type: todo
-      updatedAt: '2024-12-08T07:47:27.439Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -658.416042255658
+      updatedAt: '2025-01-01T07:48:29.331Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -705.4268236376184
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -482,10 +486,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 593
+      content: Upgrade Proxy
       created_at: '2023-12-27T23:19:05.726944Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7537478714'
@@ -518,11 +522,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 570
+      text: Get rid of stuff
       type: todo
-      updatedAt: '2024-12-08T07:47:30.216Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.332Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -531,10 +535,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 594
+      content: Get rid of stuff
       created_at: '2023-12-28T22:14:14.593856Z'
       creator_id: '33931948'
-      description: some test description
+      description: 'Important because: more room.'
       due: null
       duration: null
       id: '7540048302'
@@ -567,11 +571,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 569
+      text: Sort through recyclables
       type: todo
-      updatedAt: '2024-12-08T07:47:32.913Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.332Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -580,10 +584,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 595
+      content: Sort through recyclables
       created_at: '2023-12-28T22:21:14.435167Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540059617'
@@ -616,11 +620,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 568
+      text: Take care of recycling
       type: todo
-      updatedAt: '2024-12-08T07:47:35.737Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.333Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -629,10 +633,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 596
+      content: Take care of recycling
       created_at: '2023-12-28T22:21:45.174059Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540060444'
@@ -656,7 +660,7 @@
       collapseChecklist: false
       completed: false
       createdAt: '2024-06-02T06:31:25.330Z'
-      date: '2024-10-06T00:00:00.000Z'
+      date: null
       group:
         assignedUsers: []
         completedBy: {}
@@ -665,11 +669,11 @@
       priority: 1.5
       reminders: []
       tags: []
-      text: some test task 582
+      text: Do ministering
       type: todo
-      updatedAt: '2024-12-08T07:47:38.500Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -268.8981378373189
+      updatedAt: '2025-01-01T07:48:29.362Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -315.90891921928016
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -678,16 +682,11 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 597
+      content: Do ministering
       created_at: '2023-12-28T22:24:51.944175Z'
       creator_id: '33931948'
-      description: some test description
-      due:
-        date: '2024-10-06'
-        datetime: null
-        is_recurring: false
-        string: Oct 6
-        timezone: null
+      description: ''
+      due: 2025-01-03 00:00:00-07:00
       duration: null
       id: '7540066382'
       is_completed: false
@@ -719,11 +718,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 567
+      text: Find service opportunities
       type: todo
-      updatedAt: '2024-12-08T07:47:41.263Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.333Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -732,10 +731,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 598
+      content: Find service opportunities
       created_at: '2023-12-28T22:53:24.237277Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540114923'
@@ -768,11 +767,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 566
+      text: Get access to gym
       type: todo
-      updatedAt: '2024-12-08T07:47:44.026Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.334Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -781,10 +780,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 599
+      content: Get access to gym
       created_at: '2023-12-28T22:56:09.716609Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540118482'
@@ -817,11 +816,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 565
+      text: Order more furniture
       type: todo
-      updatedAt: '2024-12-08T07:47:47.409Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.335Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -830,10 +829,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 600
+      content: Order more furniture and other things
       created_at: '2023-12-28T22:58:17.744318Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540121533'
@@ -866,11 +865,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 564
+      text: Use perishable foods
       type: todo
-      updatedAt: '2024-12-08T07:47:50.158Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.335Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -879,10 +878,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 1
-      content: some test task 601
+      content: Use perishable foods
       created_at: '2023-12-28T22:59:02.159514Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540122581'
@@ -915,11 +914,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 563
+      text: Improve LinkedIn network
       type: todo
-      updatedAt: '2024-12-08T07:47:52.938Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.336Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -928,10 +927,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 602
+      content: Improve LinkedIn network
       created_at: '2023-12-28T23:03:10.330193Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540130284'
@@ -964,11 +963,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 562
+      text: Look into faculty advisors at schools
       type: todo
-      updatedAt: '2024-12-08T07:47:55.123Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.348Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -977,10 +976,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 603
+      content: Look into faculty advisors at schools
       created_at: '2023-12-28T23:04:17.179131Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540132474'
@@ -1013,11 +1012,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 561
+      text: Order bookshelf
       type: todo
-      updatedAt: '2024-12-08T07:47:57.313Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.348Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1026,10 +1025,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 604
+      content: Order bookshelf
       created_at: '2023-12-28T23:05:48.097027Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540134847'
@@ -1062,11 +1061,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 560
+      text: Determine if I should get a cpac cleaning machine
       type: todo
-      updatedAt: '2024-12-08T07:47:59.494Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.349Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1075,10 +1074,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 605
+      content: Determine if I should get a cpac cleaning machine
       created_at: '2023-12-28T23:07:09.096765Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540136788'
@@ -1111,11 +1110,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 559
+      text: Setup appt with urologist
       type: todo
-      updatedAt: '2024-12-08T07:48:02.083Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.349Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1124,10 +1123,11 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 606
+      content: Setup appt with urologist
       created_at: '2023-12-28T23:08:44.445862Z'
       creator_id: '33931948'
-      description: some test description
+      description: I need to go back to the urologist to get things checked out some
+        more.
       due: null
       duration: null
       id: '7540139149'
@@ -1140,55 +1140,6 @@
       section_id: null
       sync_id: null
       url: https://app.todoist.com/app/task/7540139149
-'7540142388':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: f6265a1e-2dad-4579-b8a1-186cc76b4d95
-      alias: '7540142388'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2023-12-28T23:20:03.713Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: f6265a1e-2dad-4579-b8a1-186cc76b4d95
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 558
-      type: todo
-      updatedAt: '2024-12-08T07:48:04.290Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 607
-      created_at: '2023-12-28T23:11:07.166876Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7540142388'
-      is_completed: false
-      labels: []
-      order: 8
-      parent_id: '7540121533'
-      priority: 1
-      project_id: '2325704627'
-      section_id: null
-      sync_id: null
-      url: https://app.todoist.com/app/task/7540142388
 '7540144704':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
@@ -1209,11 +1160,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 557
+      text: Get device to remove nose hair
       type: todo
-      updatedAt: '2024-12-08T07:48:06.636Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.342Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1222,16 +1173,16 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 608
+      content: Get device to remove nose hair
       created_at: '2023-12-28T23:12:47.192260Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540144704'
       is_completed: false
       labels: []
-      order: 1
+      order: 2
       parent_id: null
       priority: 1
       project_id: '2268090338'
@@ -1258,11 +1209,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 556
+      text: Clean my car
       type: todo
-      updatedAt: '2024-12-08T07:48:09.022Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.342Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1271,10 +1222,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 609
+      content: Clean my car
       created_at: '2023-12-28T23:13:12.812019Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540145333'
@@ -1287,55 +1238,6 @@
       section_id: null
       sync_id: null
       url: https://app.todoist.com/app/task/7540145333
-'7540146080':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: 32543f80-af54-4704-8cef-5c3324b1389d
-      alias: '7540146080'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2023-12-28T23:20:05.719Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: 32543f80-af54-4704-8cef-5c3324b1389d
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 555
-      type: todo
-      updatedAt: '2024-12-08T07:48:11.602Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 610
-      created_at: '2023-12-28T23:13:47.926390Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7540146080'
-      is_completed: false
-      labels: []
-      order: 5
-      parent_id: null
-      priority: 1
-      project_id: '2325701967'
-      section_id: null
-      sync_id: null
-      url: https://app.todoist.com/app/task/7540146080
 '7540147800':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
@@ -1356,11 +1258,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 554
+      text: Get laptop cooling pad
       type: todo
-      updatedAt: '2024-12-08T07:48:13.834Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.343Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1369,10 +1271,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 611
+      content: Get laptop cooling pad
       created_at: '2023-12-28T23:14:58.794845Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540147800'
@@ -1405,11 +1307,11 @@
       priority: 2
       reminders: []
       tags: []
-      text: some test task 553
+      text: Get prove of disability
       type: todo
-      updatedAt: '2024-12-08T07:48:16.102Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.343Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1418,10 +1320,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 612
+      content: Get proof of disability
       created_at: '2023-12-28T23:15:33.217060Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540148541'
@@ -1454,11 +1356,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 552
+      text: Setup a savings account
       type: todo
-      updatedAt: '2024-12-08T07:48:18.274Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.344Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1467,10 +1369,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 613
+      content: Setup a savings account
       created_at: '2023-12-28T23:16:31.646097Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540149823'
@@ -1503,11 +1405,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 551
+      text: Get a new passport
       type: todo
-      updatedAt: '2024-12-08T07:48:20.686Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.344Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1516,10 +1418,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 614
+      content: Get a new passport
       created_at: '2023-12-28T23:16:57.548060Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540150340'
@@ -1552,11 +1454,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 550
+      text: Fill out form DS-82
       type: todo
-      updatedAt: '2024-12-08T07:48:22.874Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.345Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1565,10 +1467,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 615
+      content: Fill out form DS-82
       created_at: '2023-12-28T23:18:27.983514Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540152259'
@@ -1598,14 +1500,14 @@
         completedBy: {}
       id: 21e3b74e-146b-452f-abde-b1ced1c6f417
       notes: ''
-      priority: 1
+      priority: 2
       reminders: []
       tags: []
-      text: some test task 549
+      text: Get passport photo
       type: todo
-      updatedAt: '2024-12-08T07:48:25.293Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.345Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1614,18 +1516,20 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 616
+      content: Get passport photo
       created_at: '2023-12-28T23:18:39.679053Z'
       creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
+      description: ''
+      due: 2025-01-03 00:00:00-07:00
+      duration: !!python/object:todoist_api_python.models.Duration
+        amount: 30
+        unit: minute
       id: '7540152506'
       is_completed: false
       labels: []
       order: 12
       parent_id: '7540150340'
-      priority: 1
+      priority: 4
       project_id: '2325704627'
       section_id: null
       sync_id: null
@@ -1650,11 +1554,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 548
+      text: Pay passport fee
       type: todo
-      updatedAt: '2024-12-08T07:48:27.529Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.346Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1663,10 +1567,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 617
+      content: Pay passport fee
       created_at: '2023-12-28T23:18:52.546189Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7540152744'
@@ -1699,11 +1603,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 547
+      text: Finish application
       type: todo
-      updatedAt: '2024-12-08T07:48:29.729Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -655.0581292998037
+      updatedAt: '2025-01-01T07:48:29.346Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -702.0689106817641
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1712,10 +1616,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 618
+      content: Finish application
       created_at: '2023-12-28T23:19:42.764202Z'
       creator_id: '33931948'
-      description: some test description
+      description: Mail passport, etc
       due: null
       duration: null
       id: '7540153842'
@@ -1748,11 +1652,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 546
+      text: Replace cmos battery
       type: todo
-      updatedAt: '2024-12-08T07:48:31.911Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -638.2685645205321
+      updatedAt: '2025-01-01T07:48:29.347Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -685.2793459024925
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1761,10 +1665,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 619
+      content: Replace cmos battery
       created_at: '2024-01-03T04:37:28.652833Z'
       creator_id: '33931948'
-      description: some test description
+      description: Replace cmos battery for desktop.
       due: null
       duration: null
       id: '7553118850'
@@ -1777,153 +1681,6 @@
       section_id: '49662010'
       sync_id: null
       url: https://app.todoist.com/app/task/7553118850
-'7555209349':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: 025f941c-2b81-4a0e-a7dc-7826743ef891
-      alias: '7555209349'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2024-01-06T23:18:17.789Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: 025f941c-2b81-4a0e-a7dc-7826743ef891
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 544
-      type: todo
-      updatedAt: '2024-12-08T07:48:34.195Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 620
-      created_at: '2024-01-03T17:06:38.945594Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7555209349'
-      is_completed: false
-      labels: []
-      order: 4
-      parent_id: '7540048302'
-      priority: 1
-      project_id: '2325701967'
-      section_id: null
-      sync_id: null
-      url: https://app.todoist.com/app/task/7555209349
-'7559681068':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: d96c6b80-b0ae-4af3-a45c-4152dea47d56
-      alias: '7559681068'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2024-01-06T23:18:18.335Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: d96c6b80-b0ae-4af3-a45c-4152dea47d56
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 543
-      type: todo
-      updatedAt: '2024-12-08T07:48:36.869Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 621
-      created_at: '2024-01-04T18:36:17.419580Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7559681068'
-      is_completed: false
-      labels: []
-      order: 9
-      parent_id: '7540121533'
-      priority: 1
-      project_id: '2325704627'
-      section_id: null
-      sync_id: null
-      url: https://app.todoist.com/app/task/7559681068
-'7559881707':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: 2ebbdef7-2359-46dd-b76f-bd98fdf2a2fa
-      alias: '7559881707'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2024-01-06T23:18:19.401Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: 2ebbdef7-2359-46dd-b76f-bd98fdf2a2fa
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 542
-      type: todo
-      updatedAt: '2024-12-08T07:48:39.255Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 622
-      created_at: '2024-01-04T19:39:08.558215Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7559881707'
-      is_completed: false
-      labels: []
-      order: 10
-      parent_id: '7540121533'
-      priority: 1
-      project_id: '2325704627'
-      section_id: null
-      sync_id: null
-      url: https://app.todoist.com/app/task/7559881707
 '7560879459':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
@@ -1944,11 +1701,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 540
+      text: Install alternate to Google Assistant?
       type: todo
-      updatedAt: '2024-12-08T07:48:41.438Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.359Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -1957,10 +1714,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 623
+      content: Install alternate to Google Assistant?
       created_at: '2024-01-05T03:04:38.845483Z'
       creator_id: '33931948'
-      description: some test description
+      description: 'Important because: put in tasks when driving'
       due: null
       duration: null
       id: '7560879459'
@@ -1993,11 +1750,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 539
+      text: Get new coat
       type: todo
-      updatedAt: '2024-12-08T07:48:43.635Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.350Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2006,10 +1763,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 624
+      content: Get new coat
       created_at: '2024-01-05T03:07:41.945334Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560883540'
@@ -2042,11 +1799,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 538
+      text: Find best way to remind myself
       type: todo
-      updatedAt: '2024-12-08T07:48:45.818Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.351Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2055,10 +1812,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 625
+      content: Find best way to remind myself
       created_at: '2024-01-05T03:22:03.098946Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560902351'
@@ -2091,11 +1848,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 537
+      text: Fix minor issues w/ car
       type: todo
-      updatedAt: '2024-12-08T07:48:48.232Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.351Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2104,10 +1861,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 626
+      content: Fix minor issues w/ car
       created_at: '2024-01-05T04:00:48.847199Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560958073'
@@ -2140,11 +1897,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 536
+      text: Fix visor
       type: todo
-      updatedAt: '2024-12-08T07:48:50.870Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.352Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2153,10 +1910,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 627
+      content: Fix visor
       created_at: '2024-01-05T04:01:58.401245Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560960012'
@@ -2189,11 +1946,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 535
+      text: Fix rubber thing along window
       type: todo
-      updatedAt: '2024-12-08T07:48:53.096Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.352Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2202,10 +1959,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 628
+      content: Fix rubber thing along window
       created_at: '2024-01-05T04:02:17.641550Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560960323'
@@ -2238,11 +1995,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 534
+      text: Get radio working again
       type: todo
-      updatedAt: '2024-12-08T07:48:55.292Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.353Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2251,10 +2008,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 629
+      content: Get radio working again
       created_at: '2024-01-05T04:02:30.738556Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560960658'
@@ -2287,11 +2044,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 530
+      text: Travel to Yellowstone
       type: todo
-      updatedAt: '2024-12-08T07:48:57.762Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.355Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2300,10 +2057,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 630
+      content: Travel to Yellowstone
       created_at: '2024-01-05T04:18:16.101468Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560981204'
@@ -2336,11 +2093,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 529
+      text: Travel to Europe
       type: todo
-      updatedAt: '2024-12-08T07:48:59.999Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.355Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2349,10 +2106,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 631
+      content: Travel to Europe
       created_at: '2024-01-05T04:18:45.105266Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560981747'
@@ -2385,11 +2142,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 528
+      text: Travel to all National Parks
       type: todo
-      updatedAt: '2024-12-08T07:49:02.435Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.356Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2398,10 +2155,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 632
+      content: Travel to all National Parks
       created_at: '2024-01-05T04:19:50.592916Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560982835'
@@ -2434,11 +2191,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 527
+      text: Clean-up email
       type: todo
-      updatedAt: '2024-12-08T07:49:04.806Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.356Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2447,10 +2204,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 633
+      content: Clean-up email
       created_at: '2024-01-05T04:26:33.613042Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7560990338'
@@ -2483,11 +2240,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 526
+      text: Get rid of washer part
       type: todo
-      updatedAt: '2024-12-08T07:49:07.195Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.357Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2496,10 +2253,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 634
+      content: Get rid of washer part
       created_at: '2024-01-05T05:02:01.348095Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7561032075'
@@ -2507,60 +2264,11 @@
       labels: []
       order: 5
       parent_id: '7540048302'
-      priority: 1
+      priority: 2
       project_id: '2325701967'
       section_id: null
       sync_id: null
       url: https://app.todoist.com/app/task/7561032075
-'7561033180':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: 75a3d8d2-b43c-4dcc-bb7d-ea2642c9fafc
-      alias: '7561033180'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2024-01-07T04:31:35.545Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: 75a3d8d2-b43c-4dcc-bb7d-ea2642c9fafc
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 525
-      type: todo
-      updatedAt: '2024-12-08T07:49:09.737Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 635
-      created_at: '2024-01-05T05:02:49.593110Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7561033180'
-      is_completed: false
-      labels: []
-      order: 6
-      parent_id: null
-      priority: 1
-      project_id: '2325701967'
-      section_id: null
-      sync_id: null
-      url: https://app.todoist.com/app/task/7561033180
 '7561035342':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
@@ -2581,11 +2289,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 524
+      text: Find better app for calorie counting
       type: todo
-      updatedAt: '2024-12-08T07:49:12.504Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.368Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2594,10 +2302,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 636
+      content: Find better app for calorie counting
       created_at: '2024-01-05T05:04:26.548169Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7561035342'
@@ -2610,55 +2318,6 @@
       section_id: '49662010'
       sync_id: null
       url: https://app.todoist.com/app/task/7561035342
-'7561035934':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: 64711b3f-6279-43c0-80c7-a5ae5a8a8bb3
-      alias: '7561035934'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2024-01-07T04:31:43.830Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: 64711b3f-6279-43c0-80c7-a5ae5a8a8bb3
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 523
-      type: todo
-      updatedAt: '2024-12-08T07:49:15.068Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 637
-      created_at: '2024-01-05T05:04:53.563677Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '7561035934'
-      is_completed: false
-      labels: []
-      order: 7
-      parent_id: null
-      priority: 1
-      project_id: '2266383484'
-      section_id: '49662010'
-      sync_id: null
-      url: https://app.todoist.com/app/task/7561035934
 '7561038910':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
@@ -2679,11 +2338,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 522
+      text: Bike assessories
       type: todo
-      updatedAt: '2024-12-08T07:49:17.734Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -628.1948256529691
+      updatedAt: '2025-01-01T07:48:29.368Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -675.2056070349296
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2692,10 +2351,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 638
+      content: Bike assessories
       created_at: '2024-01-05T05:07:27.414524Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7561038910'
@@ -2728,11 +2387,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 521
+      text: Look into getting an electric car?
       type: todo
-      updatedAt: '2024-12-08T07:49:20.464Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -601.3315220061346
+      updatedAt: '2025-01-01T07:48:30.109Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -648.342303388095
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2741,10 +2400,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 639
+      content: Look into getting an electric car?
       created_at: '2024-01-14T19:01:09.549986Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7593971961'
@@ -2777,11 +2436,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 520
+      text: Find better way to hold stuff.
       type: todo
-      updatedAt: '2024-12-08T07:49:23.156Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -601.3315220061346
+      updatedAt: '2025-01-01T07:48:32.300Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -648.342303388095
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2790,10 +2449,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 640
+      content: Find better way to hold stuff.
       created_at: '2024-01-14T19:02:23.970146Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7593974424'
@@ -2823,14 +2482,14 @@
         completedBy: {}
       id: 957f7dfe-866a-4250-ab51-08ecb437c380
       notes: ''
-      priority: 1.5
+      priority: 1
       reminders: []
       tags: []
-      text: some test task 519
+      text: Bike rack for car
       type: todo
-      updatedAt: '2024-12-08T07:49:25.506Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -601.3315220061346
+      updatedAt: '2025-01-01T07:48:34.514Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -648.342303388095
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2839,10 +2498,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 641
+      content: Bike rack for car
       created_at: '2024-01-14T19:02:52.651962Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7593975409'
@@ -2850,7 +2509,7 @@
       labels: []
       order: 2
       parent_id: '7561038910'
-      priority: 3
+      priority: 1
       project_id: '2325704627'
       section_id: null
       sync_id: null
@@ -2875,11 +2534,11 @@
       priority: 2
       reminders: []
       tags: []
-      text: some test task 505
+      text: Look into integrations w/ 'Toggl Track
       type: todo
-      updatedAt: '2024-12-08T07:49:27.959Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -14.082371142610924
+      updatedAt: '2025-01-01T07:48:36.746Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -41.29302271877632
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2888,10 +2547,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 642
+      content: Look into integrations w/ 'Toggl Track
       created_at: '2024-02-02T20:14:03.603581Z'
       creator_id: '33931948'
-      description: some test description
+      description: ''
       due: null
       duration: null
       id: '7659234747'
@@ -2924,11 +2583,11 @@
       priority: 2
       reminders: []
       tags: []
-      text: some test task 511
+      text: Get accommodation for GRE
       type: todo
-      updatedAt: '2024-12-08T07:49:30.627Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -101.00249158383436
+      updatedAt: '2025-01-01T07:48:39.003Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -148.01327296579558
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -2937,10 +2596,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 643
+      content: Get accommodation for GRE
       created_at: '2024-09-07T21:10:52.397926Z'
       creator_id: '33931948'
-      description: some test description
+      description: Do what is needed.
       due: null
       duration: null
       id: '8371010436'
@@ -2953,55 +2612,6 @@
       section_id: '166398944'
       sync_id: null
       url: https://app.todoist.com/app/task/8371010436
-'8495266469':
-  hab: !!python/object:hab_task.HabTask
-    _HabTask__task_dict:
-      _id: 20e2f820-f79c-4163-b458-49c8e9e6451b
-      alias: '8495266469'
-      attribute: str
-      byHabitica: false
-      challenge: {}
-      collapseChecklist: false
-      completed: false
-      createdAt: '2024-10-16T04:04:10.048Z'
-      date: null
-      group:
-        assignedUsers: []
-        completedBy: {}
-      id: 20e2f820-f79c-4163-b458-49c8e9e6451b
-      notes: ''
-      priority: 1
-      reminders: []
-      tags: []
-      text: some test task 509
-      type: todo
-      updatedAt: '2024-12-08T07:49:33.090Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -36.08285399984443
-    existing_checklist_items: []
-    new_checklist_items: []
-  recurs: 'No'
-  tod: !!python/object:todo_task.TodTask
-    _TodTask__task_dict:
-      assignee_id: null
-      assigner_id: null
-      comment_count: 0
-      content: some test task 645
-      created_at: '2024-10-16T04:00:05.942550Z'
-      creator_id: '33931948'
-      description: some test description
-      due: null
-      duration: null
-      id: '8495266469'
-      is_completed: false
-      labels: []
-      order: 6
-      parent_id: '8371010436'
-      priority: 1
-      project_id: '2266383530'
-      section_id: '166398944'
-      sync_id: null
-      url: https://app.todoist.com/app/task/8495266469
 '8520951602':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
@@ -3022,11 +2632,11 @@
       priority: 1
       reminders: []
       tags: []
-      text: some test task 504
+      text: Find ways to save money
       type: todo
-      updatedAt: '2024-12-08T07:49:35.852Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
-      value: -14.082371142610924
+      updatedAt: '2025-01-01T07:48:41.239Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -41.29302271877632
     existing_checklist_items: []
     new_checklist_items: []
   recurs: 'No'
@@ -3035,10 +2645,10 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 646
+      content: Find ways to save money
       created_at: '2024-10-24T05:11:27.253165Z'
       creator_id: '33931948'
-      description: some test description
+      description: See [A simpler way to organize your work - Workflowy](https://workflowy.com/#/ca359d0a08c0)
       due: null
       duration: null
       id: '8520951602'
@@ -3051,30 +2661,30 @@
       section_id: null
       sync_id: null
       url: https://app.todoist.com/app/task/8520951602
-'8657661358':
+'8717421066':
   hab: !!python/object:hab_task.HabTask
     _HabTask__task_dict:
-      _id: 84ee5c7b-c882-4c00-b150-55dce9264ab3
-      alias: '8657661358'
+      _id: 9068ab50-b219-4721-9924-bf27dca37283
+      alias: '8717421066'
       attribute: str
       byHabitica: false
       challenge: {}
       collapseChecklist: false
       completed: false
-      createdAt: '2024-12-07T05:36:39.965Z'
-      date: '2024-12-08'
+      createdAt: '2024-12-30T07:27:26.336Z'
+      date: null
       group:
         assignedUsers: []
         completedBy: {}
-      id: 84ee5c7b-c882-4c00-b150-55dce9264ab3
+      id: 9068ab50-b219-4721-9924-bf27dca37283
       notes: ''
       priority: 1
       reminders: []
       tags: []
-      text: some test task 501
+      text: '[Todoist task: Get laptop cooling pad](https://app.todoist.com/app/task/get-laptop-cooling-pad-6CFhXWQ87p69748F)'
       type: todo
-      updatedAt: '2024-12-08T07:51:20.319Z'
-      userId: cd18fc9f-b649-4384-932a-f3bda6fe8102
+      updatedAt: '2025-01-01T07:48:43.556Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
       value: -2.025956704627065
     existing_checklist_items: []
     new_checklist_items: []
@@ -3084,24 +2694,1097 @@
       assignee_id: null
       assigner_id: null
       comment_count: 0
-      content: some test task 647
-      created_at: '2024-12-07T05:36:16.498779Z'
+      content: '[Todoist task: Get laptop cooling pad](https://app.todoist.com/app/task/get-laptop-cooling-pad-6CFhXWQ87p69748F)'
+      created_at: '2024-12-29T00:07:08.683297Z'
       creator_id: '33931948'
-      description: some test description
-      due:
-        date: '2024-12-08'
-        datetime: null
-        is_recurring: false
-        string: Dec 8
-        timezone: null
+      description: ''
+      due: null
       duration: null
-      id: '8657661358'
+      id: '8717421066'
+      is_completed: false
+      labels: []
+      order: 14
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717421066
+'8717425346':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 3e8f315c-f48a-4788-87e8-4684abbf0092
+      alias: '8717425346'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:28.794Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 3e8f315c-f48a-4788-87e8-4684abbf0092
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Determine if I need cmos battery.
+      type: todo
+      updatedAt: '2025-01-01T07:48:45.928Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Determine if I need cmos battery.
+      created_at: '2024-12-29T00:11:15.871396Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717425346'
+      is_completed: false
+      labels: []
+      order: 7
+      parent_id: '7553118850'
+      priority: 1
+      project_id: '2266383484'
+      section_id: '49662010'
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717425346
+'8717426042':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 656d6c3a-a9e4-4db4-8a04-c00482f5add2
+      alias: '8717426042'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:31.681Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 656d6c3a-a9e4-4db4-8a04-c00482f5add2
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: '[Todoist task: Get device to remove nose hair](https://app.todoist.com/app/task/get-device-to-remove-nose-hair-6CFhXHpcwfRFpmJx)'
+      type: todo
+      updatedAt: '2025-01-01T07:48:48.278Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: '[Todoist task: Get device to remove nose hair](https://app.todoist.com/app/task/get-device-to-remove-nose-hair-6CFhXHpcwfRFpmJx)'
+      created_at: '2024-12-29T00:12:04.814315Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717426042'
+      is_completed: false
+      labels: []
+      order: 15
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717426042
+'8717428502':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 2e5169ab-aab1-40bb-8fe9-8a9543555dc8
+      alias: '8717428502'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:34.734Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 2e5169ab-aab1-40bb-8fe9-8a9543555dc8
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Computer replacement parts
+      type: todo
+      updatedAt: '2025-01-01T07:48:50.908Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Computer replacement parts
+      created_at: '2024-12-29T00:14:18.829799Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717428502'
+      is_completed: false
+      labels: []
+      order: 16
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717428502
+'8717429117':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: a1950dea-1b60-4bda-85e2-0ecb65465709
+      alias: '8717429117'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:38.129Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: a1950dea-1b60-4bda-85e2-0ecb65465709
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Laptop battery
+      type: todo
+      updatedAt: '2025-01-01T07:48:53.565Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Laptop battery
+      created_at: '2024-12-29T00:14:56.203850Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717429117'
+      is_completed: false
+      labels: []
+      order: 12
+      parent_id: '8717428502'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717429117
+'8717429722':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 4d378e40-69ba-4d1a-be83-1f915d66a73f
+      alias: '8717429722'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:40.879Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 4d378e40-69ba-4d1a-be83-1f915d66a73f
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Replacement power cord
+      type: todo
+      updatedAt: '2025-01-01T07:48:55.864Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Replacement power cord
+      created_at: '2024-12-29T00:15:24.654516Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717429722'
+      is_completed: false
+      labels: []
+      order: 13
+      parent_id: '8717428502'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717429722
+'8717431729':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: b59d3702-d32a-4656-bde6-c67c1b9a3ba6
+      alias: '8717431729'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:43.575Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: b59d3702-d32a-4656-bde6-c67c1b9a3ba6
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: jeans
+      type: todo
+      updatedAt: '2025-01-01T07:48:58.345Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: jeans
+      created_at: '2024-12-29T00:17:16.858726Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717431729'
+      is_completed: false
+      labels: []
+      order: 17
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717431729
+'8717431986':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 8e31a357-7320-426b-bb75-18a95bf2ff8a
+      alias: '8717431986'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:47.040Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 8e31a357-7320-426b-bb75-18a95bf2ff8a
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: coat
+      type: todo
+      updatedAt: '2025-01-01T07:49:00.560Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: coat
+      created_at: '2024-12-29T00:17:31.540569Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717431986'
+      is_completed: false
+      labels: []
+      order: 18
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717431986
+'8717432795':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 6c0176a4-2ee0-4426-a460-979b9f8fcfc2
+      alias: '8717432795'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:50.424Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 6c0176a4-2ee0-4426-a460-979b9f8fcfc2
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: water flosser
+      type: todo
+      updatedAt: '2025-01-01T07:49:02.874Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: water flosser
+      created_at: '2024-12-29T00:18:21.054176Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717432795'
+      is_completed: false
+      labels: []
+      order: 19
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717432795
+'8717433018':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: f2390958-19ab-4c7b-95fa-53e1d39cc1a0
+      alias: '8717433018'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:53.283Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: f2390958-19ab-4c7b-95fa-53e1d39cc1a0
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: passkeys
+      type: todo
+      updatedAt: '2025-01-01T07:49:05.028Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: passkeys
+      created_at: '2024-12-29T00:18:30.836394Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717433018'
+      is_completed: false
+      labels: []
+      order: 20
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717433018
+'8717435695':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 1a235ddd-b8f0-45a4-a20c-2847494e3ef0
+      alias: '8717435695'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:55.801Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 1a235ddd-b8f0-45a4-a20c-2847494e3ef0
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Garment bottoms
+      type: todo
+      updatedAt: '2025-01-01T07:49:07.178Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Garment bottoms
+      created_at: '2024-12-29T00:21:16.793551Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8717435695'
+      is_completed: false
+      labels: []
+      order: 21
+      parent_id: '7540121533'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8717435695
+'8719973822':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 48d41376-beab-41bc-b556-7f2de2d506a0
+      alias: '8719973822'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:27:58.405Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 48d41376-beab-41bc-b556-7f2de2d506a0
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Message back Hailee
+      type: todo
+      updatedAt: '2025-01-01T07:49:09.375Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Message back Hailee
+      created_at: '2024-12-30T05:55:07.456889Z'
+      creator_id: '33931948'
+      description: Message back Hailee, from Mutual
+      due: 2025-01-05 00:00:00-07:00
+      duration: null
+      id: '8719973822'
+      is_completed: false
+      labels:
+      - Dating
+      order: 1
+      parent_id: null
+      priority: 1
+      project_id: '2268090338'
+      section_id: '52413322'
+      sync_id: null
+      url: https://app.todoist.com/app/task/8719973822
+'8719976389':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 1e2ba743-6762-4a6a-ae30-3b383be0cbea
+      alias: '8719976389'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:01.291Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 1e2ba743-6762-4a6a-ae30-3b383be0cbea
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Message Madelyn (not my sister)
+      type: todo
+      updatedAt: '2025-01-01T07:49:11.733Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Message Madelyn (not my sister)
+      created_at: '2024-12-30T05:57:38.273024Z'
+      creator_id: '33931948'
+      description: She's from Mutual. Message for last time, if she doesn't message
+        me back.
+      due: 2025-01-04 00:00:00-07:00
+      duration: null
+      id: '8719976389'
+      is_completed: false
+      labels: []
+      order: 0
+      parent_id: null
+      priority: 1
+      project_id: '2268090338'
+      section_id: '52413322'
+      sync_id: null
+      url: https://app.todoist.com/app/task/8719976389
+'8720098091':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 59c2ff38-799a-4916-a75b-d96bb3e9b3ce
+      alias: '8720098091'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:04.157Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 59c2ff38-799a-4916-a75b-d96bb3e9b3ce
+      notes: ''
+      priority: 1.5
+      reminders: []
+      tags: []
+      text: Get money back from utilities
+      type: todo
+      updatedAt: '2025-01-01T07:49:13.895Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Get money back from utilities
+      created_at: '2024-12-30T07:18:00.314883Z'
+      creator_id: '33931948'
+      description: ''
+      due: 2025-01-03 00:00:00-07:00
+      duration: null
+      id: '8720098091'
+      is_completed: false
+      labels: []
+      order: 12
+      parent_id: null
+      priority: 3
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720098091
+'8720100288':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 22d172af-3946-4990-b4f2-db588fa986f4
+      alias: '8720100288'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:07.277Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 22d172af-3946-4990-b4f2-db588fa986f4
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Get money back for gas from old apartment
+      type: todo
+      updatedAt: '2025-01-01T07:49:16.050Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Get money back for gas from old apartment
+      created_at: '2024-12-30T07:19:24.081094Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8720100288'
+      is_completed: false
+      labels: []
+      order: 13
+      parent_id: '8720098091'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720100288
+'8720100893':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: c9d27d78-388d-4ea9-9fa7-0bbe16c4a740
+      alias: '8720100893'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:10.083Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: c9d27d78-388d-4ea9-9fa7-0bbe16c4a740
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Get back money from Omaha utility
+      type: todo
+      updatedAt: '2025-01-01T07:49:18.321Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Get back money from Omaha utility
+      created_at: '2024-12-30T07:19:44.874086Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8720100893'
+      is_completed: false
+      labels: []
+      order: 14
+      parent_id: '8720098091'
+      priority: 1
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720100893
+'8720101947':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: fee36bac-6119-4b0d-bbd1-e0118a42944f
+      alias: '8720101947'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:12.869Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: fee36bac-6119-4b0d-bbd1-e0118a42944f
+      notes: ''
+      priority: 1.5
+      reminders: []
+      tags: []
+      text: Cancel old renters insurance
+      type: todo
+      updatedAt: '2025-01-01T07:49:20.707Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Cancel old renters insurance
+      created_at: '2024-12-30T07:20:25.691671Z'
+      creator_id: '33931948'
+      description: ''
+      due: 2025-01-03 00:00:00-07:00
+      duration: null
+      id: '8720101947'
+      is_completed: false
+      labels: []
+      order: 13
+      parent_id: null
+      priority: 3
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720101947
+'8720104238':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 153f3158-0acb-409e-8ad8-f94e01cf389d
+      alias: '8720104238'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:15.407Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 153f3158-0acb-409e-8ad8-f94e01cf389d
+      notes: ''
+      priority: 1.5
+      reminders: []
+      tags: []
+      text: Follow up on emails
+      type: todo
+      updatedAt: '2025-01-01T07:49:23.027Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Follow up on emails
+      created_at: '2024-12-30T07:21:49.177191Z'
+      creator_id: '33931948'
+      description: ''
+      due: 2025-01-03 00:00:00-07:00
+      duration: null
+      id: '8720104238'
+      is_completed: false
+      labels: []
+      order: 14
+      parent_id: null
+      priority: 3
+      project_id: '2325704627'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720104238
+'8720106654':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 0441ac07-8e79-407f-beb6-35ce04a42f34
+      alias: '8720106654'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-30T07:28:17.810Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 0441ac07-8e79-407f-beb6-35ce04a42f34
+      notes: ''
+      priority: 1.5
+      reminders: []
+      tags: []
+      text: Get more food
+      type: todo
+      updatedAt: '2025-01-01T07:49:25.187Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Get more food
+      created_at: '2024-12-30T07:23:23.909043Z'
+      creator_id: '33931948'
+      description: ''
+      due: 2025-01-03 00:00:00-07:00
+      duration: null
+      id: '8720106654'
+      is_completed: false
+      labels: []
+      order: 2
+      parent_id: null
+      priority: 3
+      project_id: '2265601233'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720106654
+'8720359324':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: a3383fa7-6125-418e-90e4-40fa8af8d972
+      alias: '8720359324'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-31T00:22:15.862Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: a3383fa7-6125-418e-90e4-40fa8af8d972
+      notes: ''
+      priority: 1.5
+      reminders: []
+      tags: []
+      text: Replace shower curtain
+      type: todo
+      updatedAt: '2025-01-01T07:49:27.753Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Replace shower curtain
+      created_at: '2024-12-30T09:21:06.399382Z'
+      creator_id: '33931948'
+      description: Shower curtain is slightly too short
+      due: 2025-01-03 00:00:00-07:00
+      duration: null
+      id: '8720359324'
+      is_completed: false
+      labels: []
+      order: 3
+      parent_id: null
+      priority: 3
+      project_id: '2265601233'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8720359324
+'8720360813':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 1ab534d7-0b59-4db1-8155-491f779f627e
+      alias: '8720360813'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2024-12-31T00:22:18.587Z'
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 1ab534d7-0b59-4db1-8155-491f779f627e
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Determine length needed
+      type: todo
+      updatedAt: '2025-01-01T07:49:30.014Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Determine length needed
+      created_at: '2024-12-30T09:21:43.701936Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8720360813'
       is_completed: false
       labels: []
       order: 1
-      parent_id: null
+      parent_id: '8720359324'
       priority: 1
       project_id: '2265601233'
       section_id: null
       sync_id: null
-      url: https://app.todoist.com/app/task/8657661358
+      url: https://app.todoist.com/app/task/8720360813
+'8723161390':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: 21e0b362-5ca9-4cc9-a68a-86c2e9b2210a
+      alias: '8723161390'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2025-01-01T04:47:35.122Z'
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: 21e0b362-5ca9-4cc9-a68a-86c2e9b2210a
+      notes: ''
+      priority: 1
+      reminders: []
+      tags: []
+      text: Get rid of washer and dryer
+      type: todo
+      updatedAt: '2025-01-01T07:49:32.184Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Get rid of washer and dryer
+      created_at: '2024-12-31T08:43:32.027314Z'
+      creator_id: '33931948'
+      description: ''
+      due: null
+      duration: null
+      id: '8723161390'
+      is_completed: false
+      labels: []
+      order: 6
+      parent_id: '7540048302'
+      priority: 2
+      project_id: '2325701967'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8723161390
+'8723163206':
+  hab: !!python/object:hab_task.HabTask
+    _HabTask__task_dict:
+      _id: d6b26514-bb36-4957-9e55-d6e2ebca9ac6
+      alias: '8723163206'
+      attribute: str
+      byHabitica: false
+      challenge: {}
+      collapseChecklist: false
+      completed: false
+      createdAt: '2025-01-01T04:47:38.277Z'
+      date: null
+      group:
+        assignedUsers: []
+        completedBy: {}
+      id: d6b26514-bb36-4957-9e55-d6e2ebca9ac6
+      notes: ''
+      priority: 2
+      reminders: []
+      tags: []
+      text: Schedule cleaning
+      type: todo
+      updatedAt: '2025-01-01T07:49:34.387Z'
+      userId: 518b34ec-0992-457d-a6cb-58e5bd20f522
+      value: -2.025956704627065
+    existing_checklist_items: []
+    new_checklist_items: []
+  recurs: 'No'
+  tod: !!python/object:todo_task.TodTask
+    _TodTask__task_dict:
+      assignee_id: null
+      assigner_id: null
+      comment_count: 0
+      content: Schedule cleaning
+      created_at: '2024-12-31T08:44:37.863857Z'
+      creator_id: '33931948'
+      description: ''
+      due: 2025-01-02 00:00:00-07:00
+      duration: null
+      id: '8723163206'
+      is_completed: false
+      labels: []
+      order: 5
+      parent_id: null
+      priority: 4
+      project_id: '2325701967'
+      section_id: null
+      sync_id: null
+      url: https://app.todoist.com/app/task/8723163206

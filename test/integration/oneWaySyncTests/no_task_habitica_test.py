@@ -4,12 +4,10 @@ import pickle
 from datetime import datetime
 import pytest
 import requests
-from mockito import when, mock, unstub, when2, verify, captor, ANY, arg_that, kwargs
-import one_way_sync
+from mockito import when, mock, when2, verify, captor, ANY, arg_that
 from one_way_sync import sync_todoist_to_habitica
 from todoist_api_python import models
-from todo_api_plus import TodoAPIPlus as todoAPI
-from common_fixtures import empty_pickle, fake_config_file # pylint: disable=unused-import
+from common_fixtures import empty_pickle, fake_config_file, mock_web_calls # pylint: disable=unused-import
 # pylint: enable=invalid-name
 
 
@@ -64,7 +62,7 @@ def verify_post_request(data):
     if data['text'] == 'Test task 1':
         assert data['type'] == 'todo'
         assert data['text'] == 'Test task 1'
-        assert data['date'] == ''
+        assert data['date'] == '12/27/2024, 00:00:00'
         assert data['alias'] == '8296278113'
         assert data['priority'] == '2'
         assert data['attribute'] == 'str'
@@ -97,7 +95,6 @@ def verify_pickle_dump(dump_dict):
     assert tod_data['content'] == 'Test task 1'
     assert tod_data['id'] == '8296278113'
     assert tod_data['created_at'] == '2025-01-04T00:00:00.0Z'
-    # TODO: this doesn't seem right, maybe fix?
     assert tod_data['priority'] == 1
     # Check hab_task
     hab_data = hab_task.task_dict
@@ -106,28 +103,8 @@ def verify_pickle_dump(dump_dict):
     assert hab_data['text'] == 'Some test task'
     assert hab_data['priority'] == 1
     expected_due = datetime(2024, 12, 27)
-    due = hab_task.due_date
+    due = hab_task.due
     assert due == expected_due
-
-
-@pytest.fixture(scope="function")
-def mock_web_calls(request):
-    # mock out the web call to Habitica
-    response = mock({'status': 200, 'ok': True}, spec=requests.Response)
-    when(requests).get('https://habitica.com/api/v3/tasks/user/', **kwargs).thenReturn(response)
-    when(response).json().thenReturn(request.param['hab_task']).thenReturn(request.param['completed_habs'])
-
-    # mock call to Todoist
-    tasks = request.param['todo_tasks']
-    when(one_way_sync).get_tasks(...).thenReturn((tasks, todoAPI))
-
-    # mock out call to Todoist for completed tasks
-    tasks = request.param['done_tasks']
-    when(todoAPI).get_all_completed_items().thenReturn(tasks)
-
-    yield # run tests
-
-    unstub() # run unstub() to ensure it doesn't break other tests
 
 
 # pylint: disable=missing-class-docstring
@@ -137,11 +114,8 @@ class TestNoTasksHabitica:
     @pytest.mark.parametrize("pickle_in", [empty_pickle()], indirect=True)
     def test(self,
              fake_config_file,
-             mock_web_calls,
-             pickle_in):
+             mock_web_calls):
         # pylint: enable=redefined-outer-name, unused-argument
-        if True:
-            pytest.xfail("Expected to fail, until I fix bug")
 
         # set default response
         response = mock({'status': 200, 'ok': True}, spec=requests.Response)
@@ -155,7 +129,7 @@ class TestNoTasksHabitica:
         # mock out web call to get id
         hab_task = {'text': 'Some test task', 'priority': '', 'attribute': '',
                     'type': 'todo', '_id': 'a94e8f46-5c14-f14a-f189-e669e239730a',
-                    'completed': False, 'alias': '96935939'}
+                    'completed': False, 'alias': '96935939', 'date': '12/27/2024, 00:00:00'}
         hab_val2 = {"data": hab_task}
 
         response2 = mock({'status': 200, 'ok': True}, spec=requests.Response)
@@ -196,6 +170,3 @@ class TestNoTasksHabitica:
         dump_dict = captor(ANY(dict))
         verify(pkl_out, times=1).dump(dump_dict)
         verify_pickle_dump(dump_dict)
-
-        # clean-up
-        unstub()

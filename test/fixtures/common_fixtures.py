@@ -3,6 +3,10 @@
 import os
 import shutil
 import pytest
+import requests
+from mockito import mock, when, unstub, kwargs
+import one_way_sync
+from todo_api_plus import TodoAPIPlus as todoAPI
 
 # pylint: disable=import-error
 from helpers import TestHelpers
@@ -45,3 +49,23 @@ def auth_cfg(tmp_path_factory):
     yield
     # clean-up
     shutil.rmtree(tmp)
+
+
+@pytest.fixture
+def mock_web_calls(request):
+    # mock out the web call to Habitica
+    response = mock({'status': 200, 'ok': True}, spec=requests.Response)
+    when(requests).get('https://habitica.com/api/v3/tasks/user/', **kwargs).thenReturn(response)
+    when(response).json().thenReturn(request.param['hab_task']).thenReturn(request.param['completed_habs'])
+
+    # mock call to Todoist
+    tasks = request.param['todo_tasks']
+    when(one_way_sync).get_tasks(...).thenReturn((tasks, todoAPI))
+
+    # mock out call to Todoist for completed tasks
+    tasks = request.param['done_tasks']
+    when(todoAPI).get_all_completed_items().thenReturn(tasks)
+
+    yield # run tests
+
+    unstub() # run unstub() to ensure it doesn't break other tests
