@@ -106,7 +106,7 @@ class TestDateSync:
              fake_config_file,
              mock_web_calls):
         # pylint: enable=redefined-outer-name, unused-argument
-        pytest.xfail("Date bug")
+        # pytest.xfail("Date bug")
 
         # set default response
         response = mock({'status': 200, 'ok': True}, spec=requests.Response)

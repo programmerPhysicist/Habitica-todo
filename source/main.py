@@ -464,11 +464,11 @@ def sync_hab2todo_todo(hab, tod):
         habDict['priority'] = 1
 
     try:
-        dueNow = tod.due.date()
+        dueNow = tod.due_date
     except:
         dueNow = ''
     try:
-        dueOld = parse_date_utc(hab.date).date()
+        dueOld = hab.due
     except:
         dueOld = ''
 
